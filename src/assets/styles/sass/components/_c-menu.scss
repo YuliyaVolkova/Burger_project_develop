@@ -1,0 +1,125 @@
+
+.c-menu {
+
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+}
+
+.c-menu__accord {
+
+	display: flex;
+
+	@include tablet {
+
+		flex-direction: row-reverse;
+	}
+}
+
+.c-menu__menu-card {
+	
+	display: flex;
+
+	&.is-active {
+
+		.menu-card__link {
+
+			color: $brand-color;
+		}
+
+		.menu-card__content {
+	
+			width: rem(540);
+
+			@include tablet {
+
+				width: rem(530);
+			}
+
+			@include mobile {
+
+				width: rem(400);
+			}
+
+			@include mobile {
+
+				width: rem(300);
+			}
+		}
+	}
+}
+
+.menu-card__title {
+
+	font-family: 'gagalin';
+	font-weight: normal;
+	font-size: rem(40);
+	width: rem(80); 
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+
+	&:before {
+
+		content: '';
+		display: block;
+		@include absolute-stretch;
+		background-color: rgba(20, 20, 20, 0.7);
+	}
+
+	@include tablet {
+
+		width: rem(70);
+	}
+
+	@include mobile {
+
+		width: rem(60);
+		font-size: rem(35);
+	}
+}
+
+.menu-card__link {
+
+	display: inline-block; 
+	transform-origin: center;
+	transform: rotate(-90deg);
+	line-height: rem(80);
+	white-space: nowrap;
+	
+	@include tablet {
+
+		line-height: rem(70);
+	}
+
+	@include mobile {
+
+		line-height: rem(60);
+	}
+}
+
+.menu-card__content {
+	
+	width: 0;
+	overflow: hidden;
+	background-color: rgba($text-color, 0.93);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.menu-card__desc {
+	
+	color: $primaryColor;
+	font-size: rem(14);
+	width: 80%;
+	height: 85%;
+	overflow: hidden;
+}

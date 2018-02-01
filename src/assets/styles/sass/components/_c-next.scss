@@ -1,0 +1,43 @@
+
+.c-next {
+
+	@include size(rem(32), rem(22)); 
+	margin-bottom: rem(10);
+}
+
+.c-next__link {
+
+	display: block;
+	@include size(100%);
+	transition: transform 0.3s;
+
+	&:before {
+		
+		content: '';
+		display: block;
+		@include size(rem(22));
+		border-radius: 0 rem(4) 20% rem(4);
+		border: rem(3) solid $primaryColor;
+		transform-origin: center;
+		transform: translate(25%, -25%) rotate(45deg);
+		border-left: 1px solid transparent;
+		border-top: 1px solid transparent;
+	}
+
+	&:hover {
+
+		overflow: visible;
+		font-size: 0;
+	}
+
+	&:hover:before {
+
+		transform: scale(1.3) translate(25%, -25%) rotate(45deg);
+	}
+
+	@include s-mobile {
+
+		@include size(rem(20));
+
+	}
+}

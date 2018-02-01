@@ -1,0 +1,61 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass functions.
+// -----------------------------------------------------------------------------
+$browser-context: 16;
+
+/// rem
+
+@function rem($pixels, $context: $browser-context) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1rem;
+}
+
+/// em
+
+@function em($pixels, $context: $browser-context) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1em;
+}
+
+/// function is it allows you to pass a list of directions, 
+///so that you get bottom left from opposite-direction(top right).
+/// It can be useful when dealing with background-position, for instance
+
+@function opposite-direction($directions) {
+
+  $opposite-directions: ();
+  $direction-map: (
+    'top': 'bottom',
+    'right': 'left',
+    'bottom': 'top',
+    'left': 'right',
+    'ltr': 'rtl',
+    'rtl': 'ltr');
+
+  @each $direction in $directions {
+    $opposite-direction: map-get($direction-map, $direction);
+        @if $opposite-direction != null { 
+      $opposite-directions: append($opposite-directions, #{$opposite-direction});
+    }
+    @else {
+      @warn "No opposite direction can be found for `#{$direction}`.";
+    }
+  }
+
+  @return $opposite-directions;
+}
+

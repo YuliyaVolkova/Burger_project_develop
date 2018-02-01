@@ -1,0 +1,92 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+* {
+	box-sizing: border-box;
+}
+body, html {
+
+  	color: $text-color;
+ 	background-color: $text-color; 
+  	font-family: $text-font-stack;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%; 
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 1.425rem;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-display: optional;
+	position: relative;
+	overflow: hidden;
+
+	@include laptop {
+
+		font-size: 15px;
+	}
+
+	@include tablet {
+
+		font-size: 14px;
+		/*overflow-y: visible;*/
+	}
+
+	@include mobile {
+
+		font-size: 13px;
+	}
+
+	@include s-mobile {
+
+		font-size: 12px;
+	}
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  color: $primaryColor;
+  text-decoration: none;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+ul li {
+	list-style: none;
+}
+
+h1, h2, h3, p {
+	margin: 0;
+}
+
+svg {
+	fill: currentColor;
+	stroke: currentColor;
+}
+
+button, input, select, textarea {
+  font-family: $text-font-stack;
+ }
+

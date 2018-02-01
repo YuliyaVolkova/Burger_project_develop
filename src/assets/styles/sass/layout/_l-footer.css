@@ -1,0 +1,2 @@
+.l-footer{position:absolute;bottom:0;left:0;right:0;min-height:rem(55);background:url("../../img/footer_texture.jpg") repeat center;background-size:cover;display:flex;width:100%;padding:rem(10) 0;justify-content:center}.l-footer__inner{flex-direction:row;justify-content:space-between}.l-footer__col-one{width:50%}.l-footer__col-two{width:14%}
+/*# sourceMappingURL=_l-footer.css.map */

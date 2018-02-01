@@ -6,273 +6,482 @@
 		<meta name="keywords" content="">
 		<meta name="viewport" content="device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<style>img {max-height: 10rem;} .link {color: #5dd1f9;text-transform: uppercase;display: block;} .icon {width: 1em; height: 1em;}</style>
-		<link rel="stylesheet" type="text/css" href="./css/normalize.css">
-		<link rel="stylesheet" type="text/css" href="./styles.css">
+		<style>img {max-height: 10rem;} .logo {color: #5dd1f9;text-transform: uppercase;display: block;} .svg-use {max-width: 2rem;}</style>
+		<link rel="stylesheet" type="text/css" href="./assets/css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
 		<link rel="shortcut icon" href="#" type="image/x-icon">
 		<title>Burger</title>
+		<script src="./assets/js-vendor/svg4everybody.js"></script>
+		<script>svg4everybody();</script>
 	</head>
 	<body>
 		<!--[if lt IE 8]> <p class="chromeframe">Похоже, что ты используешь устаревший браузер, друг. Пожалуйста, <a href="http:// browsehappy.com/">скачай новый браузер абсолютно бесплатно</a> или <a href="http://www.google.com/ chromeframe/?redirect=true">активируй Google Chrome Frame</ a></p> <![endif]-->
 		<div class="l-wrapper">
-			<section class="l-page l-first" id="s-1">
-				<header class="l-header">
-					<div class="l-container l-header__inner">
-						<div class="l-header__left">
-							<div class="c-logo">
-								<a href="#" class="link c-logo__link hide-text" style="background-image: url('logo.svg'); background-repeat: no-repeat">
+			<section class="l-page l-hero" id="one">
+				<div class="l-container">
+					<header class="l-header">
+						<div class="l-header__inner">
+							<div class="l-header__left">
+								<div class="c-logo">
+									<a href="#" class="logo c-logo__link hide-text" style="background-image: url('logo.svg'); background-repeat: no-repeat">
 									<img src='logo.svg' alt='Burger-кафе - вместе вкуснее' class="c-logo__img visually-hidden">Burger-кафе - вместе вкуснее</a>
+								</div>
+							</div>
+							<div class="l-header__right">
+								<nav class="c-main-nav">
+									<ul class="c-main-nav__list">
+										<li class="c-main-nav__item">
+											<a href="#two" class="c-main-nav__link">о нас</a>
+										</li>
+										<li class="c-main-nav__item">
+											<a href="#three" class="c-main-nav__link">Бургеры</a>
+										</li>
+										<li class="c-main-nav__item">
+											<a href="#four" class="c-main-nav__link">команда</a>
+										</li>
+										<li class="c-main-nav__item">
+											<a href="#five" class="c-main-nav__link">меню</a>
+										</li>
+										<li class="c-main-nav__item">
+											<a href="#six" class="c-main-nav__link">отзывы</a>
+										</li>
+										<li class="c-main-nav__item">
+											<a href="#eight" class="c-main-nav__link">контакты</a>
+										</li>
+									</ul>
+									<div class="c-button">
+										<a href="#seven" id="orderBut" class="c-button__link">
+											заказать</a>
+									</div>
+								</nav>
 							</div>
 						</div>
-						<div class="l-header__right">
-							<nav class="c-main-nav">
-								<ul class="c-main-nav__list">
-									<li class="c-main-nav__item">
-										<a href="#" class="c-main-nav__link"><span class="c-main-nav__link-text">о нас</span></a>
-									</li>
-									<li class="c-main-nav__item">
-										<a href="#" class="c-main-nav__link"><span class="c-main-nav__link-text">Бургеры</span></a>
-									</li>
-									<li class="c-main-nav__item">
-										<a href="#" class="c-main-nav__link"><span class="c-main-nav__link-text">команда</span></a>
-									</li>
-									<li class="c-main-nav__item">
-										<a href="#" class="c-main-nav__link"><span class="c-main-nav__link-text">меню</span></a>
-									</li>
-									<li class="c-main-nav__item">
-										<a href="#" class="c-main-nav__link"><span class="c-main-nav__link-text">отзывы</span></a>
-									</li>
-									<li class="c-main-nav__item">
-										<a href="#" class="c-main-nav__link"><span class="c-main-nav__link-text">контакты</span></a>
-									</li>
-								</ul>
-								<div class="c-main-nav__but">
-									<a href="#" class="c-main-nav__button-link">
-								заказать</a>
-								</div>
-							</nav>
-						</div>
-					</div>
-				</header>
-				<div class="l-first__content">
-					<div class="l-container l-page__inner">
-						<div class="l-first__content-left">
-							<div class="c-burger" style="background-image: url('./images/burger.png'); background-repeat: no-repeat;">
+					</header>
+					<div class="l-page__inner">
+						<div class="l-hero__first">
+							<div class="c-burger" style="background-image: url('./assets/images/content/burger.png'); background-repeat: no-repeat;">
+								<img src="./assets/images/content/burger.png" alt="" class="c-burger__img visually-hidden">
 							</div>	
 						</div>
-						<div class="l-first__content-right">
-							<h2 class="h-title-of-section"> мы делаем</h2>
+						<div class="l-hero__second">
+							<h2 class="h-section-title"> мы делаем</h2>
 							<div class="c-slogan">натуральные бургеры</div>
 						</div>
 					</div>
+					<div class="c-next">
+						<a href="#two" class="c-next__link hide-text" id="next">Next</a>
+					</div>
 				</div>
 			</section>
-			<section class="l-page l-second" id="s-2">
-				<div class="l-container l-second__container">
-					<h2 class="h-title-of-section h-title-of-section--section-two">мы лучшие</h2>
-					<ul class="c-about">
-						<li class="c-about__about-card">
-						<div class="aboute-card__img-wrap" style="background-image: url(./images/meat.svg); background-repeat: no-repeat;">
-							<img src="./images/meat.svg" alt="свежее мясо" class="about-card__img visually-hidden">
-						</div>
-						<div class="about-card__desc">
-							<div class="about-card__desc-header"><span>100% свежее мясо</span></div>
-							<div class="about-card__desc-content">
-								<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis qui, et placeat ullam ipsam eveniet voluptas pariatur. </span>
+			<section class="l-page l-aboute" id="two">
+				<div class="l-container justify-center">
+					<h2 class="h-section-title text-color align-center">мы лучшие</h2>
+					<ul class="c-aboute">
+						<li class="c-aboute__aboute-card">
+							<div class="aboute-card__img-wrap" style="background-image: url('./assets/images/content/best/meat.svg'); background-repeat: no-repeat;">
+								<img src="./assets/images/content/best/meat.svg" alt="свежее мясо" class="aboute-card__img visually-hidden">
 							</div>
-						</div>
+							<div class="aboute-card__desc">
+								<div class="aboute-card__desc-header"><span>100% свежее мясо</span></div>
+								<div class="aboute-card__desc-content">
+									<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis qui, et placeat ullam ipsam eveniet voluptas pariatur. </span>
+								</div>
+							</div>
 						</li>
-						<li class="c-about__about-card">
-						<div class="aboute-card__img-wrap" style="background-image: url(./images/hand.svg); background-repeat: no-repeat;">
-							<img src="./images/hand.svg" alt="ручная работа" class="about-card__img visually-hidden">
-						</div>
-						<div class="about-card__desc">
-							<div class="about-card__desc-header"><span>ручная сборка</span></div>
-							<div class="about-card__desc-content">
-								<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis qui, et placeat ullam ipsam eveniet voluptas pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequuntur dolor atque voluptatum debitis quam, consequatur maiores commodi molestias</span>
+						<li class="c-aboute__aboute-card">
+							<div class="aboute-card__img-wrap" style="background-image: url('./assets/images/content/best/hand.svg'); background-repeat: no-repeat;">
+								<img src="./assets/images/content/best/hand.svg" alt="ручная работа" class="aboute-card__img visually-hidden">
 							</div>
-						</div>
+							<div class="aboute-card__desc">
+								<div class="aboute-card__desc-header"><span>ручная сборка</span></div>
+								<div class="aboute-card__desc-content">
+									<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis qui, et placeat ullam ipsam eveniet voluptas pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequuntur dolor atque voluptatum debitis quam, consequatur maiores commodi molestias</span>
+								</div>
+							</div>
 						</li>
-						<li class="c-about__about-card">
-						<div class="aboute-card__img-wrap" style="background-image: url(./images/natural.svg); background-repeat: no-repeat;">
-							<img src="./images/natural.svg" alt="натуральные ингредиенты" class="about-card__img visually-hidden">
-						</div>
-						<div class="about-card__desc">
-							<div class="about-card__desc-header"><span>натуральные ингредиенты</span></div>
-							<div class="about-card__desc-content">
-								<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis qui, et placeat ullam ipsam eveniet voluptas pariatur. </span>
+						<li class="c-aboute__aboute-card">
+							<div class="aboute-card__img-wrap" style="background-image: url('./assets/images/content/best/natural.svg'); background-repeat: no-repeat;">
+								<img src="./assets/images/content/best/natural.svg" alt="натуральные ингредиенты" class="about-card__img visually-hidden">
 							</div>
-						</div>
+							<div class="aboute-card__desc">
+								<div class="aboute-card__desc-header"><span>натуральные ингредиенты</span></div>
+								<div class="aboute-card__desc-content">
+									<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis qui, et placeat ullam ipsam eveniet voluptas pariatur. </span>
+								</div>
+							</div>
 						</li>				
-						</ul>
+					</ul>
 				</div>
 			</section>
-			<section class="l-page l-slader" id="s-3">
-				<h2 class="h-title-of-section visually-hidden">мы делаем</h2>
+			<section class="l-page l-slider" id="three">
+				<h2 class="h-section-title">мы делаем</h2>
 			</section>
-			<section class="l-page l-team" id="s-4">
-				<h2 class="h-title-of-section">команда</h2>
+			<section class="l-page l-team" id="four">
+				<div class="c-team">
+					<div class="c-team__inner">
+						<h2 class="h-section-title">команда</h2>
+						<ul class="c-team__accord">
+							<li class="c-team__team-card is-active">
+								<div class="team-card__title"><a href="#" class="team-card__link">Дэниэл Редклиф</a></div>
+								<div class="team-card__content">
+									<div class="team-card__img-wrap" style="background-image: url('./assets/images/content/team/aphex1_100.jpg'); background-repeat: no-repeat;">
+										<img src="./assets/images/content/team/aphex1_100.jpg" alt="#" class="team-card__img visually-hidden">
+									</div>
+									<div class="team-card__desc">
+										<div class="team-card__desc-header">Оператор</div>
+										<div class="team-card__desc-text">
+											С радостью поможет подобрать идеальный бургер и оформить заказ.
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="c-team__team-card">
+								<div class="team-card__title"><a href="#" class="team-card__link">Дэниэл Редклиф</a></div>
+								<div class="team-card__content">
+									<div class="team-card__img-wrap" style="background-image: url('./assets/images/content/team/aphex1_100.jpg'); background-repeat: no-repeat;">
+										<img src="./assets/images/content/team/aphex1_100.jpg" alt="#" class="team-card__img visually-hidden">
+									</div>
+									<div class="team-card__desc">
+										<div class="team-card__desc-header">Оператор</div>
+										<div class="team-card__desc-text">С радостью поможет подобрать идеальный бургер и оформить заказ.</div>
+									</div>
+								</div>
+							</li>
+							<li class="c-team__team-card">
+								<div class="team-card__title"><a href="#" class="team-card__link">Дэниэл Редклиф</a></div>
+								<div class="team-card__content">
+									<div class="team-card__img-wrap" style="background-image: url('./assets/images/content/team/aphex1_100.jpg'); background-repeat: no-repeat;">
+										<img src="./assets/images/content/team/aphex1_100.jpg" alt="#" class="team-card__img visually-hidden">
+									</div>
+									<div class="team-card__desc">
+										<div class="team-card__desc-header">Оператор</div>
+										<div class="team-card__desc-text">С радостью поможет подобрать идеальный бургер и оформить заказ.</div>
+									</div>
+								</div>
+							</li>
+							<li class="c-team__team-card">
+								<div class="team-card__title"><a href="#" class="team-card__link">Дэниэл Редклиф</a></div>
+								<div class="team-card__content">
+									<div class="team-card__img-wrap" style="background-image: url('./assets/images/content/team/aphex1_100.jpg'); background-repeat: no-repeat;">
+										<img src="./assets/images/content/team/aphex1_100.jpg" alt="#" class="team-card__img visually-hidden">
+									</div>
+									<div class="team-card__desc">
+										<div class="team-card__desc-header">Оператор</div>
+										<div class="team-card__desc-text">С радостью поможет подобрать идеальный бургер и оформить заказ.</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
 			</section>
-			<section class="l-page l-menu" id="s-5">
-				<h2 class="h-title-of-section">меню</h2>
+			<section class="l-page l-menu" id="five">
+				<h2 class="h-section-title menu primary-color">меню</h2>
+					<div class="c-menu">
+						<ul class="c-menu__accord">
+							<li class="c-menu__menu-card is-active">
+								<div class="menu-card__title" style="background-image: url('./assets/images/content/menu/menu_1.jpg'); background-repeat: no-repeat;"><a href="#" class="menu-card__link">Диетическое</a></div>
+								<div class="menu-card__content">
+									<div class="menu-card__desc"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi vitae quos, natus numquam vero, illum eligendi libero praesentium nihil eaque porro placeat, molestias veritatis cumque facilis similique voluptatibus laudantium et!</span>
+									<span>Vero perspiciatis eum, quis totam, temporibus explicabo dolorum nesciunt minus autem maiores ratione impedit, tempore unde itaque dolore aliquam aperiam doloremque expedita ex magni sit odit fuga laboriosam dignissimos. Eaque!</span>
+									<span>In veritatis pariatur laborum tempore, deserunt minima odit culpa repellat officiis iusto. Laudantium non autem et voluptate, aliquid molestiae magnam vero, illo nam quis molestias debitis aspernatur mollitia doloremque reprehenderit.</span>
+									</div>
+								</div>
+							</li>
+							<li class="c-menu__menu-card">
+								<div class="menu-card__title" style="background-image: url('./assets/images/content/menu/menu_2.jpg'); background-repeat: no-repeat;"><a href="#" class="menu-card__link">Для мясоедов</a></div>
+								<div class="menu-card__content">
+									<div class="menu-card__desc"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi vitae quos, natus numquam vero, illum eligendi libero praesentium nihil eaque porro placeat, molestias veritatis cumque facilis similique voluptatibus laudantium et!</span>
+									<span>Vero perspiciatis eum, quis totam, temporibus explicabo dolorum nesciunt minus autem maiores ratione impedit, tempore unde itaque dolore aliquam aperiam doloremque expedita ex magni sit odit fuga laboriosam dignissimos. Eaque!</span>
+									<span>In veritatis pariatur laborum tempore, deserunt minima odit culpa repellat officiis iusto. Laudantium non autem et voluptate, aliquid molestiae magnam vero, illo nam quis molestias debitis aspernatur mollitia doloremque reprehenderit.</span>
+									</div>
+								</div>
+							</li>
+							<li class="c-menu__menu-card">
+								<div class="menu-card__title" style="background-image: url('./assets/images/content/menu/menu_3.jpg'); background-repeat: no-repeat;"><a href="#" class="menu-card__link">Вегетарианское</a></div>
+								<div class="menu-card__content">
+									<div class="menu-card__desc"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi vitae quos, natus numquam vero, illum eligendi libero praesentium nihil eaque porro placeat, molestias veritatis cumque facilis similique voluptatibus laudantium et!</span>
+									<span>Vero perspiciatis eum, quis totam, temporibus explicabo dolorum nesciunt minus autem maiores ratione impedit, tempore unde itaque dolore aliquam aperiam doloremque expedita ex magni sit odit fuga laboriosam dignissimos. Eaque!</span>
+									<span>In veritatis pariatur laborum tempore, deserunt minima odit culpa repellat officiis iusto. Laudantium non autem et voluptate, aliquid molestiae magnam vero, illo nam quis molestias debitis aspernatur mollitia doloremque reprehenderit.</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
 			</section>
-			<section class="l-page l-reviews" id="s-6">
-				<h2 class="h-title-of-section visually-hidden">отзывы</h2>
-				<ul class="c-reviews">
-					<li class="c-reviews__review-card">
-						<a href="#" class="review-card__link" style="background-image: url(./images/photo-8.jpg); background-repeat: no-repeat;">
-							<img src="./images/photo-8.jpg" alt="photo-1" class="review-card__img visually-hidden"></a>
-						<div class="review-card__content">
-							<div class="review-card__header"><span>Константин Спилберг</span></div>
-							<div class="review-card__text">
+			<section class="l-page" id="six">
+				<ul class="c-feeds">
+					<li class="c-feeds__feeds-card">
+						<div class="feeds-card__photo" style="background-image: url('./assets/images/content/feeds/feeds_1.jpg'); background-repeat: no-repeat;">
+							<img src="./assets/images/content/feeds/feeds_1.jpg" alt="photo-1" class="feeds-card__photo-img visually-hidden"></div>
+						<div class="feeds-card__content">
+							<div class="feeds-card__header"><span>Константин Спилберг</span></div>
+							<div class="feeds-card__text">
 								<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis qui, et placeat ullam ipsam eveniet voluptas pariatur. </span>
 							</div>
-							<div class="review-card__button">
-								<a href="#" class="review-card__but-link">подробнее</a>
+							<div class="c-button c-button--bg-text-color">
+								<a href="#" class="c-button__link">подробнее</a>
 							</div>
 						</div>
 					</li>
-					<li class="c-reviews__review-card">
-						<a href="#" class="review-card__link" style="background-image: url(./images/photo1.jpg); background-repeat: no-repeat;">
-							<img src="./images/photo1.jpg" alt="photo-1" class="review-card__img visually-hidden"></a>
-						<div class="review-card__content">
-							<div class="review-card__header"><span>Константин Спилберг</span></div>
-							<div class="review-card__text">
+					<li class="c-feeds__feeds-card">
+						<div class="feeds-card__photo" style="background-image: url('./assets/images/content/feeds/photo-2.jpg'); background-repeat: no-repeat;">
+							<img src="./assets/images/content/feeds/photo-2.jpg" alt="" class="feeds-card__photo-img visually-hidden"></div>
+						<div class="feeds-card__content">
+							<div class="feeds-card__header"><span>Константин Спилберг</span></div>
+							<div class="feeds-card__text">
 								<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis qui, et placeat ullam ipsam eveniet voluptas pariatur. </span>
 							</div>
-							<div class="review-card__button">
-								<a href="#" class="review-card__but-link">подробнее</a>
+							<div class="c-button c-button--bg-text-color">
+								<a href="#" class="c-button__link">подробнее</a>
 							</div>
 						</div>
 					</li>
-					<li class="c-reviews__review-card">
-						<a href="#" class="review-card__link" style="background-image: url(./images/photo-2.jpg); background-repeat: no-repeat;">
-							<img src="./images/photo-2.jpg" alt="photo-1" class="review-card__img visually-hidden"></a>
-						<div class="review-card__content">
-							<div class="review-card__header"><span>Константин Спилберг</span></div>
-							<div class="review-card__text">
+					<li class="c-feeds__feeds-card">
+						<div class="feeds-card__photo" style="background-image: url('./assets/images/content/feeds/photo-3.jpg'); background-repeat: no-repeat;">
+							<img src="./assets/images/content/feeds/photo-3.jpg" alt="" class="feeds-card__photo-img visually-hidden"></div>
+						<div class="feeds-card__content">
+							<div class="feeds-card__header"><span>Константин Спилберг</span></div>
+							<div class="feeds-card__text">
 								<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis qui, et placeat ullam ipsam eveniet voluptas pariatur. </span>
 							</div>
-							<div class="review-card__button">
-								<a href="#" class="review-card__but-link">подробнее</a>
+							<div class="c-button c-button--bg-text-color">
+								<a href="#" class="c-button__link">подробнее</a>
 							</div>
 						</div>
 					</li>
-					<li class="c-reviews__review-card">
-						<a href="#" class="review-card__link" style="background-image: url(./images/photo-3.jpg); background-repeat: no-repeat;">
-							<img src="./images/photo-3.jpg" alt="photo-1" class="review-card__img visually-hidden"></a>
-						<div class="review-card__content">
-							<div class="review-card__header"><span>Константин Спилберг</span></div>
-							<div class="review-card__text">
+					<li class="c-feeds__feeds-card">
+						<div class="feeds-card__photo" style="background-image: url('./assets/images/content/feeds/photo-6.jpg'); background-repeat: no-repeat;">
+							<img src="./assets/images/content/feeds/photo-6.jpg" alt="" class="feeds-card__photo-img visually-hidden"></div>
+						<div class="feeds-card__content">
+							<div class="feeds-card__header"><span>Константин Спилберг</span></div>
+							<div class="feeds-card__text">
 								<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis qui, et placeat ullam ipsam eveniet voluptas pariatur. </span>
 							</div>
-							<div class="review-card__button">
-								<a href="#" class="review-card__but-link">подробнее</a>
+							<div class="c-button c-button--bg-text-color">
+								<a href="#" class="c-button__link">подробнее</a>
 							</div>
 						</div>
 					</li>
-					<li class="c-reviews__review-card">
-						<a href="#" class="review-card__link" style="background-image: url(./images/photo-4.jpg); background-repeat: no-repeat;">
-							<img src="./images/photo-4.jpg" alt="photo-1" class="review-card__img visually-hidden"></a>
-						<div class="review-card__content">
-							<div class="review-card__header"><span>Константин Спилберг</span></div>
-							<div class="review-card__text">
+					<li class="c-feeds__feeds-card">
+						<div class="feeds-card__photo" style="background-image: url('./assets/images/content/feeds/photo-5.jpg'); background-repeat: no-repeat;">
+							<img src="./assets/images/content/feeds/photo-5.jpg" alt="" class="feeds-card__photo-img visually-hidden"></div>
+						<div class="feeds-card__content">
+							<div class="feeds-card__header"><span>Константин Спилберг</span></div>
+							<div class="feeds-card__text">
 								<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis qui, et placeat ullam ipsam eveniet voluptas pariatur. </span>
 							</div>
-							<div class="review-card__button">
-								<a href="#" class="review-card__but-link">подробнее</a>
+							<div class="c-button c-button--bg-text-color">
+								<a href="#" class="c-button__link">подробнее</a>
 							</div>
 						</div>
 					</li>
-					<li class="c-reviews__review-card">
-						<a href="#" class="review-card__link" style="background-image: url(./images/photo-5.jpg); background-repeat: no-repeat;">
-							<img src="./images/photo-5.jpg" alt="photo-1" class="review-card__img visually-hidden"></a>
-						<div class="review-card__content">
-							<div class="review-card__header"><span>Константин Спилберг</span></div>
-							<div class="review-card__text">
+					<li class="c-feeds__feeds-card">
+						<div class="feeds-card__photo" style="background-image: url('./assets/images/content/feeds/photo-7.jpg'); background-repeat: no-repeat;">
+							<img src="./assets/images/content/feeds/photo-7.jpg" alt="" class="feeds-card__photo-img visually-hidden"></div>
+						<div class="feeds-card__content">
+							<div class="feeds-card__header"><span>Константин Спилберг</span></div>
+							<div class="feeds-card__text">
 								<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis qui, et placeat ullam ipsam eveniet voluptas pariatur. </span>
 							</div>
-							<div class="review-card__button">
-								<a href="#" class="review-card__but-link">подробнее</a>
+							<div class="c-button c-button--bg-text-color">
+								<a href="#" class="c-button__link">подробнее</a>
 							</div>
 						</div>
 					</li>
-					<li class="c-reviews__review-card">
-						<a href="#" class="review-card__link" style="background-image: url(./images/photo-6.jpg); background-repeat: no-repeat;">
-							<img src="./images/photo-6.jpg" alt="photo-1" class="review-card__img visually-hidden"></a>
-						<div class="review-card__content">
-							<div class="review-card__header"><span>Константин Спилберг</span></div>
-							<div class="review-card__text">
+					<li class="c-feeds__feeds-card">
+						<div class="feeds-card__photo" style="background-image: url('./assets/images/content/feeds/photo-8.jpg'); background-repeat: no-repeat;">
+							<img src="./assets/images/content/feeds/photo-8.jpg" alt="" class="feeds-card__photo-img visually-hidden"></div>
+						<div class="feeds-card__content">
+							<div class="feeds-card__header"><span>Константин Спилберг</span></div>
+							<div class="feeds-card__text">
 								<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis qui, et placeat ullam ipsam eveniet voluptas pariatur. </span>
 							</div>
-							<div class="review-card__button">
-								<a href="#" class="review-card__but-link">подробнее</a>
+							<div class="c-button c-button--bg-text-color">
+								<a href="#" class="c-button__link">подробнее</a>
 							</div>
 						</div>
 					</li>
-					<li class="c-reviews__review-card">
-						<a href="#" class="review-card__link" style="background-image: url(./images/photo-7.jpg); background-repeat: no-repeat;">
-							<img src="./images/photo-7.jpg" alt="photo-1" class="review-card__img visually-hidden"></a>
-						<div class="review-card__content">
-							<div class="review-card__header"><span>Константин Спилберг</span></div>
-							<div class="review-card__text">
+					<li class="c-feeds__feeds-card">
+						<div class="feeds-card__photo" style="background-image: url('./assets/images/content/feeds/photo1.jpg'); background-repeat: no-repeat;">
+							<img src="./assets/images/content/feeds/photo1.jpg" alt="" class="feeds-card__photo-img visually-hidden"></div>
+						<div class="feeds-card__content">
+							<div class="feeds-card__header"><span>Константин Спилберг</span></div>
+							<div class="feeds-card__text">
 								<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis qui, et placeat ullam ipsam eveniet voluptas pariatur. </span>
 							</div>
-							<div class="review-card__button">
-								<a href="#" class="review-card__but-link">подробнее</a>
+							<div class="c-button c-button--bg-text-color">
+								<a href="#" class="c-button__link">подробнее</a>
 							</div>
 						</div>
 					</li>
 				</ul>
 			</section>
-			<section class="l-page l-order" id="s-7">
-				<h2 class="h-title-of-section">закажите доставку</h2>
+			<section class="l-page l-order" id="seven">
+				<div class="l-container justify-evenly">
+					<h2 class="h-section-title align-center">закажите доставку</h2>
+					<form action="#" name="order" id="order" class="c-form" method="POST">
+						<div class="c-form__inner">
+							<div class="c-form__column">
+								<div class="c-form__row">
+									<label class="c-form__item">	
+										<span class="c-form__item-title">Имя</span>
+										<input type="text" class="c-form__input" name="name" placeholder="">
+									</label>
+									<label class="c-form__item">	
+										<span class="c-form__item-title">Телефон</span>
+										<input type="text" class="c-form__input" name="phone" placeholder="">
+									</label>
+								</div>
+								<div class="c-form__row">
+									<label class="c-form__item">
+										<span class="c-form__item-title">Улица</span>
+										<input type="text" class="c-form__input" name="street" placeholder="">
+									</label>
+								</div>
+								<div class="c-form__row">
+									<label class="c-form__item">	
+										<span class="c-form__item-title">Дом</span>
+										<input type="text" class="c-form__input" name="build" placeholder="">
+									</label>
+									<label class="c-form__item">	
+										<span class="c-form__item-title">Корпус</span>
+										<input type="text" class="c-form__input" name="corp" placeholder="">
+									</label>
+									<label class="c-form__item">	
+										<span class="c-form__item-title">Квартира</span>
+										<input type="text" class="c-form__input" name="appt" placeholder="">
+									</label>
+									<label class="c-form__item">	
+										<span class="c-form__item-title">Этаж</span>
+										<input type="text" class="c-form__input" name="floor" placeholder="">
+									</label>
+								</div>
+							</div>
+							<div class="c-form__column">
+								<div class="c-form__row">
+									<label class="c-form__item">	
+										<span class="c-form__item-title">Комментарий</span>
+										<textarea name="comment" class="c-form__input"></textarea>
+									</label>
+								</div>
+								<div class="c-form__buttons">
+									<div class="c-form__row">
+										<label  class="c-form__item">
+											<input type="radio" name="cash" value="cash" class="c-form__radio"> 
+											<span class="c-form__item-title c-form__item-title--radio">Потребуется сдача</span>
+										</label>
+										<label  class="c-form__item">
+											<input type="radio" name="cash" value="cash" class="c-form__radio" checked> 
+											<span class="c-form__item-title c-form__item-title--radio">Оплата по карте</span>
+										</label>
+									</div>
+									<div class="c-form__row">
+										<label class="c-form__item">
+											<input type="checkbox" name="callback" class="c-form__checkbox">	
+											<span class="c-form__item-title c-form__item-title--checkbox">Не перезванивать</span>
+										</label>
+									</div>
+									<div class="c-form__row">
+										<button class="c-button c-form__submit" type="submit" value="Submit">
+											<span class="c-button__link">Заказать</span>
+										</button>
+										<button class="c-button c-form__but-reset" type="reset" value="Reset">
+											<span class="c-button__link">Очистить</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>	
+					</form>
+				</div>
 			</section>
-			<section class="l-page l-last" id="s-8">
-				<h2 class="h-title-of-section visually-hidden">карта</h2>
+			<section class="l-page l-map" id="eight">
+				<div class="l-yandex-map"><div class="c-yandex-map"></div></div>
+				<footer class="l-footer">
+					<div class="l-container l-footer__inner">
+							<div class="l-footer__col-one">
+								<div class="c-address"><span>Санкт-Петербург, ул.Бабушкина, д.12/1, 15</span>
+								</div>
+								<div class="c-tel">
+									<a href="tel:+7-800-000-392-10" class="c-tel__link">8 (800) 00-392-10</a>
+								</div>
+							</div>
+							<div class="l-footer__col-two">
+								<ul class="c-social">
+									<li class="c-social__item">
+										<a href="#" target="_blank" class="c-social__link"><svg class="svg-use"><title>Burger в контакте</title><use xlink:href="./assets/images/sprite_social.svg#vk"></use></svg></a>
+									</li>
+									<li class="c-social__item">
+										<a href="#" target="_blank" class="c-social__link"><svg class="svg-use"><title>Burger в facebook</title><use xlink:href="./assets/images/sprite_social.svg#fb"></use></svg></a>
+									</li>
+									<li class="c-social__item ">
+										<a href="#" target="_blank" class="c-social__link"><svg class="svg-use"><title>Burger в instagram</title><use xlink:href="./assets/images/sprite_social.svg#inst"></use></svg></a>
+									</li>
+									<li class="c-social__item ">
+										<a href="#" target="_blank" class="c-social__link"><svg class="svg-use"><title>Burger в twitter</title><use xlink:href="./assets/images/sprite_social.svg#twitter"></use></svg></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+				</footer>
 			</section>
-			<div class="l-nav-dots">
+		</div>
+		<div class="l-nav-dots">
 				<ul class="c-nav-dots">
-					<li class="c-nav-dots__item c-nav-dots__item--is-active">
-						<a href="#s-1" class="c-nav-dots__link hide-text"> главная страница
+					<li class="c-nav-dots__item is-active">
+						<a href="#one" class="c-nav-dots__link hide-text"> главная страница
 						</a>
 					</li>
 					<li class="c-nav-dots__item">
-						<a href="#s-2" class="c-nav-dots__link hide-text">мы делаем
+						<a href="#two" class="c-nav-dots__link hide-text">мы делаем
 						</a>
 					</li>
 					<li class="c-nav-dots__item">
-						<a href="#s-3" class="c-nav-dots__link hide-text">3 секция
+						<a href="#three" class="c-nav-dots__link hide-text">3 секция
 						</a>
 					</li>
 					<li class="c-nav-dots__item">
-						<a href="#s-4" class="c-nav-dots__link hide-text">команда
+						<a href="#four" class="c-nav-dots__link hide-text">команда
 						</a>
 					</li>
 					<li class="c-nav-dots__item">
-						<a href="#s-5" class="c-nav-dots__link hide-text">меню
+						<a href="#five" class="c-nav-dots__link hide-text">меню
 						</a>
 					</li>
 					<li class="c-nav-dots__item">
-						<a href="#s-6" class="c-nav-dots__link hide-text">отзывы
+						<a href="#six" class="c-nav-dots__link hide-text">отзывы
 						</a>
 					</li>
 					<li class="c-nav-dots__item">
-						<a href="#s-7" class="c-nav-dots__link hide-text">закажите доставку
+						<a href="#seven" class="c-nav-dots__link hide-text">закажите доставку
 						</a>
 					</li>
 					<li class="c-nav-dots__item">
-						<a href="#s-8" class="c-nav-dots__link hide-text">карта
+						<a href="#eight" class="c-nav-dots__link hide-text">карта
 						</a>
 					</li>
 				</ul>
 			</div>
-			<div class="l-next-page">
-				<div class="c-next-page" style="background-image: url(./images/arrow-scroll.svg); background-repeat: no-repeat;">
-					<a href="#" class="c-next-page__link"></a>
+		<div class="l-mobile-nav">
+			<div class="c-mobile-nav">
+				<a href="" class="hide-text c-mobile-nav__target">menu</a>
+				<ul class="c-mobile-nav__menu visually-hidden">
+					<li class="c-mobile-nav__item"><a href="#" class="c-mobile-nav__link">Почему мы</a></li>
+					<li class="c-mobile-nav__item"><a href="#" class="c-mobile-nav__link">Меню</a></li>
+					<li class="c-mobile-nav__item"><a href="#" class="c-mobile-nav__link">Советы</a></li>
+					<li class="c-mobile-nav__item"><a href="#" class="c-mobile-nav__link">Кто мы</a></li>
+					<li class="c-mobile-nav__item"><a href="#" class="c-mobile-nav__link">Свяжитесь с нами</a></li>
+					<li class="c-mobile-nav__item"><a href="#" class="c-mobile-nav__link">Контакты</a></li>
+				</ul>
+				<div class="c-logo c-logo--mob-nav visually-hidden">
+					<a href="#" class="logo c-logo__link hide-text" style="background-image: url('logo.svg'); background-repeat: no-repeat">
+						<img src='logo.svg' alt='Burger-кафе - вместе вкуснее' class="c-logo__img visually-hidden">Burger-кафе - вместе вкуснее</a>
 				</div>
+				<div class="c-close c-close--mob-nav visually-hidden"><a href="#" class="c-close__link hide-text">Закрыть окно</a>
+				</div> 
 			</div>
 		</div>
-		<script type="text/javascript" src="bundle.js"></script>
+		<script src="bundle.js"></script>
 	</body>
 </html>

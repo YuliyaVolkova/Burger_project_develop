@@ -1,0 +1,184 @@
+
+@mixin size($width, $height: $width) {
+	
+  width: $width;
+  height: $height;
+}
+
+/// mixins for Media Queries
+@mixin custom {
+
+  @media screen and (min-width: $desktop + 1) {
+
+    @content;
+  }
+
+}
+
+@mixin desktop {
+
+	@media screen and (min-width: $laptop + 1) and (max-width: $desktop) {
+
+		@content;
+	}
+
+}
+
+@mixin laptop {
+
+	@media screen and (max-width: $laptop) and (min-width: $tablet + 1) {
+
+		@content;
+	}
+
+}
+
+
+@mixin tablet {
+
+	@media screen and (max-width: $tablet) {
+
+		@content;
+	}
+
+}
+
+@mixin mobile {
+
+	@media screen and (max-width: $mobile) {
+
+		@content;
+	}
+
+}
+
+@mixin s-mobile {
+
+	@media screen and (max-width: $small-mobile) {
+
+		@content;
+	}
+
+}
+
+@mixin retina {
+  @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+
+@mixin print {
+  @media print {
+    @content;
+  }
+}
+
+
+/// mixins for change visiblity
+
+@mixin invisible {
+
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+
+}
+
+@mixin visible {
+
+  height: initial;
+  width: initial;
+  margin: initial;
+  position: initial;
+
+
+}
+
+/// position
+
+@mixin absolute-stretch {
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@mixin absolute-center {
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin absolute-centerX {
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin absolute-centerY {
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+}
+/// Triangle helper mixin
+/// @param {Direction} $direction - Triangle direction, either `top`, `right`, 
+///`bottom` or `left`
+/// @param {Color} $color [currentcolor] - Triangle color 
+/// @param {Length} $size [1em] - Triangle size
+
+@mixin triangle($direction, $color: currentcolor, $size: 1em) {
+  
+  @if not index(top right bottom left, $direction) {
+    @error "Direction must be either `top`, `right`, `bottom` or `left`.";
+  }
+
+  width: 0;
+  height: 0;
+  z-index: 2;
+  border-#{opposite-direction($direction)}: ($size * 1.5) solid $color;
+  
+  $perpendicular-borders: $size solid transparent;
+  
+  @if $direction == top or $direction == bottom {
+    border-left:   $perpendicular-borders;
+    border-right:  $perpendicular-borders;
+  } @else if $direction == right or $direction == left {
+    border-bottom: $perpendicular-borders;
+    border-top:    $perpendicular-borders;
+  }
+}
+
+
+/// styling radiobutton, checkbox
+
+@mixin hidden {
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+
+}
