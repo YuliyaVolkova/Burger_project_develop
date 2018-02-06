@@ -36,7 +36,11 @@
 
 .l-slider {
 	
-	background-color: $dark-grey;
+background: rgb(249,180,59); /* Old browsers */
+background: -webkit-linear-gradient(rgba(249,180,59,1) 0%, rgba(249,180,59,1) 25%, rgba(235,140,56,1) 52%, rgba(249,180,59,1) 100%);
+background: -o-linear-gradient(rgba(249,180,59,1) 0%, rgba(249,180,59,1) 25%, rgba(235,140,56,1) 52%, rgba(249,180,59,1) 100%);
+background: linear-gradient(rgba(249,180,59,1) 0%, rgba(249,180,59,1) 25%, rgba(235,140,56,1) 52%, rgba(249,180,59,1) 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b43b', endColorstr='#f9b43b',GradientType=0 ); /* IE6-9 */
 }
 
 .l-team {

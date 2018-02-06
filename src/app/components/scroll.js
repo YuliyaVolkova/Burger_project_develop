@@ -8,10 +8,17 @@ var scrollPage = (function() {
     container = document.body.querySelector('.l-wrapper'),
     pages = container.querySelectorAll('.l-page'),
     nextBut = container.querySelector('#next'),
-    orderBut = container.querySelector('#orderBut'),
+    orderButs = container.querySelectorAll('.c-button__link[data-section="gotoOrder"]'),
     mainNav = container.querySelectorAll('.c-main-nav__link'),
+    mobNav = document.body.querySelectorAll('.c-mobile-nav__link'),
+    mob = document.body.querySelector('.c-mobile-nav'),
+    mobMenu = mob.querySelector('.c-mobile-nav__menu'),
+    mobLogo = mob.querySelector('.c-logo--mob-nav'),
+    mobClose = mob.querySelector('.c-close--mob-nav'),
     dotLinks = document.body.querySelectorAll('.c-nav-dots__link'),
-    dotItems = document.body.querySelectorAll('.c-nav-dots__item');
+    dotItems = document.body.querySelectorAll('.c-nav-dots__item'),
+    nodesDotLk = Array.prototype.slice.call(dotLinks),
+    nodesPages = Array.prototype.slice.call(pages);
    
    /// check device is mobile
 
@@ -24,6 +31,13 @@ var scrollPage = (function() {
     return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1) || testExp.test(navigator.userAgent)
   }
 
+  function checkIndex(ind) {
+
+    var maxIndSect = pages.length -1;
+    if(ind < 0) ind = 0;
+    else if(ind > maxIndSect) ind = maxIndSect;
+    return ind
+  }
 
   function navMenuAct(item) {
 
@@ -31,7 +45,7 @@ var scrollPage = (function() {
    //   var siblings = n => [...n.parentElement.children].filter(c=>c!=n);
       var siblings = n => [].slice.call(n.parentElement.children).filter(c=>c!=n);
       [].forEach.call(siblings(item), function(el) {
-        el.classList.remove('is-active');
+        if(el.classList.contains('is-active'))  el.classList.remove('is-active');
       });
   }
 
@@ -53,19 +67,11 @@ var scrollPage = (function() {
     startTime,
     handletouch = callback || function(dir) { 
 
-            if (dir = 'down' && screen < pages.length - 1) {
-      screen++;
+      if (dir = 'down') screen++;
+      else if (dir = 'up')  screen--;
       showSect(screen);
-
-    }
-    else if (dir = 'up' && screen > 0) {
-
-      screen--;
-      showSect(screen);
-
-    }
-    console.log(dir, screen);
-  };
+      console.log(dir, screen);
+    };
  
     touchsurface.addEventListener('touchstart', function(e) {
         var touchobj = e.changedTouches[0];
@@ -109,11 +115,20 @@ var scrollPage = (function() {
             }
         }
         // Fire callback function with params dir="left|right|up|down", phase="end", swipetype=dir etc:
-        handletouch(e, dir, 'end', swipeType, (dir =='left' || dir =='right')? distX : distY);
+        //handletouch(e, dir, 'end', swipeType, (dir =='left' || dir =='right')? distX : distY);
         e.preventDefault();
         handletouch(dir);
     }, false);
 }
+
+  function closeMenu() {
+
+    mob.classList.remove('is-active');
+    mobMenu.classList.add('visually-hidden');
+    mobLogo.classList.add('visually-hidden');
+    mobClose.classList.add('visually-hidden');
+
+   }
 
 /// move section use css transform
    function move(scr) {
@@ -131,16 +146,16 @@ var scrollPage = (function() {
 
   function showSect(ind) {
 
-    navMenuAct(dotItems[ind]);
-    move(ind); 
+    screen = checkIndex(ind);
+    navMenuAct(dotItems[screen]);
+    move(screen); 
   }
 
   function clickDotMenu(e) {
 
    e.preventDefault();
 
-    var nodesLk = Array.prototype.slice.call(dotLinks);
-     screen = nodesLk.indexOf(this);
+     screen = nodesDotLk.indexOf(this);
      showSect(screen);   
   }
 
@@ -148,14 +163,22 @@ var scrollPage = (function() {
 
     e.preventDefault();
 
+    console.log(e.target);
+
     var href = e.target.href,
       hashInd = href.indexOf('#'),
       pageId = href.slice(hashInd),
       page = container.querySelector(pageId),
-      pagesAr = Array.prototype.slice.call(pages);
-      screen = pagesAr.indexOf(page);
+      screen = nodesPages.indexOf(page);
+
+      if(e.target.classList.contains('c-mobile-nav__link')) {
+
+        closeMenu();
+      }
+
       showSect(screen);
   }
+
 
   function mouse(e) {
 
@@ -167,9 +190,9 @@ var scrollPage = (function() {
 
     	var y=e.deltaY || e.detail || e.wheelDelta;
       
-   		if(y<0&&screen>0)  screen--;
+   		if(y<0)  screen--;
 
-		  else if (y>0 && screen<pages.length-1)	 screen ++;
+		  else if (y>0)	 screen ++;
         
          showSect(screen);
           
@@ -183,13 +206,13 @@ var scrollPage = (function() {
     
         switch(e.which) {
           case 38:
-            if (tag != 'input' && tag != 'textarea' && screen>0) {
+            if (tag != 'input' && tag != 'textarea') {
               screen--; 
               showSect(screen);
             }
             break;
           case 40:
-            if (tag != 'input' && tag != 'textarea' && screen<pages.length-1) {
+            if (tag != 'input' && tag != 'textarea') {
               screen++; 
               showSect(screen);
             }
@@ -209,23 +232,31 @@ var scrollPage = (function() {
     
     document.addEventListener('keydown', keyDown, false);
 
-    if(isMobileDevice()) onTouch(container);
+   // if(isMobileDevice()) onTouch(container);
 
-    nextBut.addEventListener('click', clickMainNav);
-    orderBut.addEventListener('click', clickMainNav);
-
-    
+    nextBut.addEventListener('click', clickMainNav, false);
+  
     var unboundForEach = Array.prototype.forEach,
         forEach = Function.prototype.call.bind(unboundForEach);
 
     forEach(dotLinks, function (el) {
 
-           el.addEventListener('click', clickDotMenu);
+           el.addEventListener('click', clickDotMenu, false);
       });
 
     forEach(mainNav, function (el) {
 
-           el.addEventListener('click', clickMainNav);
+           el.addEventListener('click', clickMainNav, false);
+      });
+
+    forEach(orderButs, function (el) {
+
+           el.addEventListener('click', clickMainNav, false);
+      });
+
+    forEach(mobNav, function (el) {
+
+           el.addEventListener('click', clickMainNav, false);
       });
 	}
 

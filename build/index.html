@@ -6,7 +6,7 @@
 		<meta name="keywords" content="">
 		<meta name="viewport" content="device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<style>img {max-height: 10rem;} .logo {color: #5dd1f9;text-transform: uppercase;display: block;} .svg-use {max-width: 2rem;}</style>
+		<style>img {max-height: 50rem;} .logo {color: #5dd1f9;text-transform: uppercase;display: block;} .svg-use {max-width: 2rem;}</style>
 		<link rel="stylesheet" type="text/css" href="./assets/css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
 		<link rel="shortcut icon" href="#" type="image/x-icon">
@@ -50,7 +50,7 @@
 										</li>
 									</ul>
 									<div class="c-button">
-										<a href="#seven" id="orderBut" class="c-button__link">
+										<a href="#seven" data-section="gotoOrder" class="c-button__link">
 											заказать</a>
 									</div>
 								</nav>
@@ -114,7 +114,237 @@
 				</div>
 			</section>
 			<section class="l-page l-slider" id="three">
-				<h2 class="h-section-title">мы делаем</h2>
+				<div class="c-slider">
+					<div class="c-slider__control">
+						<div class="c-slider__next">
+							<a href="#" class="c-slider__next-link hide-text">next</a>
+						</div>
+						<div class="c-slider__back">
+							<a href="#" class="c-slider__back-link hide-text">back</a>
+						</div>
+					</div>
+					<div class="c-slider__frame">
+						<ul class="c-slider__list is-set">
+							<li class="c-slider__sl-card">
+								<div class="c-products">
+									<a href="#" class="c-products__link">
+										<div class="c-products__main-img" style="background-image: url('./assets/images/content/slider/products/burger.svg'); background-repeat: no-repeat;"></div>
+										<div class="c-products__title">состав</div>
+										<div class="c-products__desc visually-hidden">
+											<div class="c-close-prod visually-hidden"><span class="c-close-prod__link visually-hidden"></span></div>
+												<div class="c-products__content-row">
+													<div class="c-products__img" style="background-image: url('./assets/images/content/slider/products/beef.svg'); background-repeat: no-repeat;"></div>
+													<div class="c-products__text">Говядина</div>
+													<div class="c-products__weight">300 г</div>
+												</div>
+												<div class="c-products__content-row">
+													<div class="c-products__img" style="background-image: url('./assets/images/content/slider/products/cheese.svg'); background-repeat: no-repeat;"></div>
+													<div class="c-products__text">Сыр</div>
+													<div class="c-products__weight">80 г</div>
+												</div>
+												<div class="c-products__content-row">
+													<div class="c-products__img" style="background-image: url('./assets/images/content/slider/products/cucumber.svg'); background-repeat: no-repeat;"></div>
+													<div class="c-products__text">Овощи</div>
+													<div class="c-products__weight">300 г</div>
+												</div>
+												<div class="c-products__content-row">
+													<div class="c-products__img" style="background-image: url('./assets/images/content/slider/products/sauce.svg'); background-repeat: no-repeat;"></div>
+													<div class="c-products__text">Соус</div>
+													<div class="c-products__weight">300 г</div>
+												</div>
+											</div>
+									</a>
+								</div>
+								<div class="c-kkal">
+									<div class="c-kall__value">1200</div>
+									<div class="c-kall__kkal">ккал</div>
+								</div>
+								<div class="sl-card__content">
+									<div class="sl-card__img-wrap">
+										<img src="./assets/images/content/slider/burgers-slider/burger_sandwich_PNG4124.png" alt="" class="sl-card__img">
+									</div>
+									<div class="sl-card__desc">
+										<div class="h-section-title  slider primary-color">Dark BEEF Burger</div>
+										<div class="sl-card__desc-text">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+										</div>
+										<div class="sl-card__plus">
+											<div class="sl-card__price">
+												<span class="sl-card__price-value">500</span>
+												<span class="sl-card__price-text">рублей</span>
+											</div>
+											<div class="c-button">
+												<a href="#seven" data-section="gotoOrder" class="c-button__link">заказать</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="c-slider__sl-card">
+								<div class="c-products">
+									<a href="#" class="c-products__link">
+										<div class="c-products__main-img" style="background-image: url('./assets/images/content/slider/products/burger.svg'); background-repeat: no-repeat;"></div>
+										<div class="c-products__title">состав</div>
+										<div class="c-products__desc visually-hidden">
+											<div class="c-close-prod visually-hidden"><span class="c-close-prod__link visually-hidden"></span></div>
+												<div class="c-products__content-row">
+													<div class="c-products__img" style="background-image: url('./assets/images/content/slider/products/beef.svg'); background-repeat: no-repeat;"></div>
+													<div class="c-products__text">Говядина</div>
+													<div class="c-products__weight">300 г</div>
+												</div>
+												<div class="c-products__content-row">
+													<div class="c-products__img" style="background-image: url('./assets/images/content/slider/products/cheese.svg'); background-repeat: no-repeat;"></div>
+													<div class="c-products__text">Сыр</div>
+													<div class="c-products__weight">80 г</div>
+												</div>
+												<div class="c-products__content-row">
+													<div class="c-products__img" style="background-image: url('./assets/images/content/slider/products/cucumber.svg'); background-repeat: no-repeat;"></div>
+													<div class="c-products__text">Овощи</div>
+													<div class="c-products__weight">300 г</div>
+												</div>
+												<div class="c-products__content-row">
+													<div class="c-products__img" style="background-image: url('./assets/images/content/slider/products/sauce.svg'); background-repeat: no-repeat;"></div>
+													<div class="c-products__text">Соус</div>
+													<div class="c-products__weight">300 г</div>
+												</div>
+											</div>
+									</a>
+								</div>
+								<div class="c-kkal">
+									<div class="c-kall__value">1200</div>
+									<div class="c-kall__kkal">ккал</div>
+								</div>
+								<div class="sl-card__content">
+									<div class="sl-card__img-wrap">
+										<img src="./assets/images/content/slider/burgers-slider/Chiken burger.png" alt="" class="sl-card__img">
+									</div>
+									<div class="sl-card__desc">
+										<div class="h-section-title  slider primary-color">Dark BEEF Burger</div>
+										<div class="sl-card__desc-text">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+										</div>
+										<div class="sl-card__plus">
+											<div class="sl-card__price">
+												<span class="sl-card__price-value">500</span>
+												<span class="sl-card__price-text">рублей</span>
+											</div>
+											<div class="c-button">
+												<a href="#seven" data-section="gotoOrder" class="c-button__link">заказать</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="c-slider__sl-card">
+								<div class="c-products">
+									<a href="#" class="c-products__link">
+										<div class="c-products__main-img" style="background-image: url('./assets/images/content/slider/products/burger.svg'); background-repeat: no-repeat;"></div>
+										<div class="c-products__title">состав</div>
+										<div class="c-products__desc visually-hidden">
+											<div class="c-close-prod visually-hidden"><span class="c-close-prod__link visually-hidden"></span></div>
+												<div class="c-products__content-row">
+													<div class="c-products__img" style="background-image: url('./assets/images/content/slider/products/beef.svg'); background-repeat: no-repeat;"></div>
+													<div class="c-products__text">Говядина</div>
+													<div class="c-products__weight">300 г</div>
+												</div>
+												<div class="c-products__content-row">
+													<div class="c-products__img" style="background-image: url('./assets/images/content/slider/products/cheese.svg'); background-repeat: no-repeat;"></div>
+													<div class="c-products__text">Сыр</div>
+													<div class="c-products__weight">80 г</div>
+												</div>
+												<div class="c-products__content-row">
+													<div class="c-products__img" style="background-image: url('./assets/images/content/slider/products/cucumber.svg'); background-repeat: no-repeat;"></div>
+													<div class="c-products__text">Овощи</div>
+													<div class="c-products__weight">300 г</div>
+												</div>
+												<div class="c-products__content-row">
+													<div class="c-products__img" style="background-image: url('./assets/images/content/slider/products/sauce.svg'); background-repeat: no-repeat;"></div>
+													<div class="c-products__text">Соус</div>
+													<div class="c-products__weight">300 г</div>
+												</div>
+											</div>
+									</a>
+								</div>
+								<div class="c-kkal">
+									<div class="c-kall__value">1200</div>
+									<div class="c-kall__kkal">ккал</div>
+								</div>
+								<div class="sl-card__content">
+									<div class="sl-card__img-wrap">
+										<img src="./assets/images/content/slider/burgers-slider/NYC-Diner-Bacon-Cheeseburger.png" alt="" class="sl-card__img">
+									</div>
+									<div class="sl-card__desc">
+										<div class="h-section-title  slider primary-color">Dark BEEF Burger</div>
+										<div class="sl-card__desc-text">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+										</div>
+										<div class="sl-card__plus">
+											<div class="sl-card__price">
+												<span class="sl-card__price-value">500</span>
+												<span class="sl-card__price-text">рублей</span>
+											</div>
+											<div class="c-button">
+												<a href="#seven" data-section="gotoOrder" class="c-button__link">заказать</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="c-slider__sl-card is-ref">
+								<div class="c-products">
+									<a href="#" class="c-products__link">
+										<div class="c-products__main-img" style="background-image: url('./assets/images/content/slider/products/burger.svg'); background-repeat: no-repeat;"></div>
+										<div class="c-products__title">состав</div>
+										<div class="c-products__desc visually-hidden">
+											<div class="c-close-prod visually-hidden"><span class="c-close-prod__link visually-hidden"></span></div>
+												<div class="c-products__content-row">
+													<div class="c-products__img" style="background-image: url('./assets/images/content/slider/products/beef.svg'); background-repeat: no-repeat;"></div>
+													<div class="c-products__text">Говядина</div>
+													<div class="c-products__weight">300 г</div>
+												</div>
+												<div class="c-products__content-row">
+													<div class="c-products__img" style="background-image: url('./assets/images/content/slider/products/cheese.svg'); background-repeat: no-repeat;"></div>
+													<div class="c-products__text">Сыр</div>
+													<div class="c-products__weight">80 г</div>
+												</div>
+												<div class="c-products__content-row">
+													<div class="c-products__img" style="background-image: url('./assets/images/content/slider/products/cucumber.svg'); background-repeat: no-repeat;"></div>
+													<div class="c-products__text">Овощи</div>
+													<div class="c-products__weight">300 г</div>
+												</div>
+												<div class="c-products__content-row">
+													<div class="c-products__img" style="background-image: url('./assets/images/content/slider/products/sauce.svg'); background-repeat: no-repeat;"></div>
+													<div class="c-products__text">Соус</div>
+													<div class="c-products__weight">300 г</div>
+												</div>
+											</div>
+									</a>
+								</div>
+								<div class="c-kkal">
+									<div class="c-kall__value">1200</div>
+									<div class="c-kall__kkal">ккал</div>
+								</div>
+								<div class="sl-card__content">
+									<div class="sl-card__img-wrap">
+										<img src="./assets/images/content/slider/burgers-slider/Spicy_Shrimp_Burger.png" alt="" class="sl-card__img">
+									</div>
+									<div class="sl-card__desc">
+										<div class="h-section-title  slider primary-color">Dark BEEF Burger</div>
+										<div class="sl-card__desc-text">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+										</div>
+										<div class="sl-card__plus">
+											<div class="sl-card__price">
+												<span class="sl-card__price-value">500</span>
+												<span class="sl-card__price-text">рублей</span>
+											</div>
+											<div class="c-button">
+												<a href="#seven" data-section="gotoOrder" class="c-button__link">заказать</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					
+				</div>
 			</section>
 			<section class="l-page l-team" id="four">
 				<div class="c-team">
@@ -464,15 +694,15 @@
 				</ul>
 			</div>
 		<div class="l-mobile-nav">
-			<div class="c-mobile-nav">
+			<nav class="c-mobile-nav ">
 				<a href="" class="hide-text c-mobile-nav__target">menu</a>
 				<ul class="c-mobile-nav__menu visually-hidden">
-					<li class="c-mobile-nav__item"><a href="#" class="c-mobile-nav__link">Почему мы</a></li>
-					<li class="c-mobile-nav__item"><a href="#" class="c-mobile-nav__link">Меню</a></li>
-					<li class="c-mobile-nav__item"><a href="#" class="c-mobile-nav__link">Советы</a></li>
-					<li class="c-mobile-nav__item"><a href="#" class="c-mobile-nav__link">Кто мы</a></li>
-					<li class="c-mobile-nav__item"><a href="#" class="c-mobile-nav__link">Свяжитесь с нами</a></li>
-					<li class="c-mobile-nav__item"><a href="#" class="c-mobile-nav__link">Контакты</a></li>
+					<li class="c-mobile-nav__item"><a href="#two" class="c-mobile-nav__link">Почему мы</a></li>
+					<li class="c-mobile-nav__item"><a href="#five" class="c-mobile-nav__link">Меню</a></li>
+					<li class="c-mobile-nav__item"><a href="#six" class="c-mobile-nav__link">Отзывы</a></li>
+					<li class="c-mobile-nav__item"><a href="#four" class="c-mobile-nav__link">Кто мы</a></li>
+					<li class="c-mobile-nav__item"><a href="#seven" class="c-mobile-nav__link">Свяжитесь с нами</a></li>
+					<li class="c-mobile-nav__item"><a href="#eight" class="c-mobile-nav__link">Контакты</a></li>
 				</ul>
 				<div class="c-logo c-logo--mob-nav visually-hidden">
 					<a href="#" class="logo c-logo__link hide-text" style="background-image: url('logo.svg'); background-repeat: no-repeat">
@@ -480,7 +710,7 @@
 				</div>
 				<div class="c-close c-close--mob-nav visually-hidden"><a href="#" class="c-close__link hide-text">Закрыть окно</a>
 				</div> 
-			</div>
+			</nav>
 		</div>
 		<script src="bundle.js"></script>
 	</body>

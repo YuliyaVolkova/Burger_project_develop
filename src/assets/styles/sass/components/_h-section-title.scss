@@ -57,5 +57,15 @@
 			text-align: left;
 		}
 	}
+	&.slider {
+
+		line-height: 0.95;
+		margin-bottom: rem(45);
+
+		@include tablet {
+
+			margin-bottom: 1.5rem;
+		}
+	}
 }
 
