@@ -1,4 +1,6 @@
 
+import {slider} from 'slider.js';
+
 'use strict';
 
 var scrollPage = (function() {
@@ -51,29 +53,33 @@ var scrollPage = (function() {
 
   /// for mobile device swipe handler
 
-  function onTouch(el, callback) {
+ function onTouch(el, callback) {
+    console.log('1');
   
     var touchsurface = el,
-    dir,
-    swipeType,
-    startX,
-    startY,
-    distX,
-    distY,
-    threshold = 150, //required min distance traveled to be considered swipe
-    restraint = 100, // maximum distance allowed at the same time in perpendicular direction
-    allowedTime = 500, // maximum time allowed to travel that distance 500
-    elapsedTime,
-    startTime,
-    handletouch = callback || function(dir) { 
+     dir,
+     swipeType,
+     startX,
+     startY,
+     distX,
+     distY,
+     threshold = 150, //required min distance traveled to be considered swipe
+     restraint = 100, // maximum distance allowed at the same time in perpendicular direction
+     allowedTime = 500, // maximum time allowed to travel that distance 500
+     elapsedTime,
+     startTime,
+     handletouch = callback || function(dir) { 
 
-      if (dir = 'down') screen++;
-      else if (dir = 'up')  screen--;
+      console.log('change section', dir);
+
+      if (dir === 'down') screen--;
+      else if (dir === 'up')  screen++;
       showSect(screen);
-      console.log(dir, screen);
+     
     };
  
     touchsurface.addEventListener('touchstart', function(e) {
+
         var touchobj = e.changedTouches[0];
         dir = 'none';
         swipeType = 'none';
@@ -81,11 +87,14 @@ var scrollPage = (function() {
         startY = touchobj.pageY;
         startTime = new Date().getTime(); // record time when finger first makes contact with surface
      //   handletouch(e, 'none', 'start', swipeType, 0); // fire callback function with params dir="none", phase="start", swipetype="none" etc
-        e.preventDefault();
+    //    e.preventDefault();
+        console.log('1', startX, startY, startTime);
+       
  
     }, false);
  
     touchsurface.addEventListener('touchmove', function(e) {
+
         var touchobj = e.changedTouches[0];
         distX = touchobj.pageX - startX; // get horizontal dist traveled by finger while in contact with surface
         distY = touchobj.pageY - startY; // get vertical dist traveled by finger while in contact with surface
@@ -100,26 +109,32 @@ var scrollPage = (function() {
          //   handletouch(e, dir, 'move', swipeType, distY); // fire callback function with params dir="up|down", phase="move", swipetype="none" etc
         }
         e.preventDefault(); // prevent scrolling when inside DIV
+        console.log('2', distX, distY, dir);
+        distX = 0;
+        distY = 0;
     }, false);
  
     touchsurface.addEventListener('touchend', function(e) {
-        var touchobj = e.changedTouches[0];
+    //    var touchobj = e.changedTouches[0];
         elapsedTime = new Date().getTime() - startTime; // get time elapsed
         if (elapsedTime <= allowedTime){ // first condition for awipe met
             
-            if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint){ // 2nd condition for horizontal swipe met
+           /* if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint){ // 2nd condition for horizontal swipe met
                 swipeType = dir; // set swipeType to either "left" or "right"
             }
             else if (Math.abs(distY) >= threshold && Math.abs(distX) <= restraint){ // 2nd condition for vertical swipe met
                 swipeType = dir; // set swipeType to either "top" or "down"
-            }
+            }*/
+            swipeType = dir;
+
         }
         // Fire callback function with params dir="left|right|up|down", phase="end", swipetype=dir etc:
         //handletouch(e, dir, 'end', swipeType, (dir =='left' || dir =='right')? distX : distY);
-        e.preventDefault();
+        //e.preventDefault();
+        console.log('3', elapsedTime, swipeType);
         handletouch(dir);
     }, false);
-}
+} 
 
   function closeMenu() {
 
@@ -162,8 +177,6 @@ var scrollPage = (function() {
   function clickMainNav(e) {
 
     e.preventDefault();
-
-    console.log(e.target);
 
     var href = e.target.href,
       hashInd = href.indexOf('#'),
@@ -232,7 +245,7 @@ var scrollPage = (function() {
     
     document.addEventListener('keydown', keyDown, false);
 
-   // if(isMobileDevice()) onTouch(container);
+    if(isMobileDevice()) onTouch(container);
 
     nextBut.addEventListener('click', clickMainNav, false);
   
@@ -258,10 +271,14 @@ var scrollPage = (function() {
 
            el.addEventListener('click', clickMainNav, false);
       });
+    slider.handler();
+
 	}
 
-   return {handler}
+   return {handler, indexActSection: screen}
 
 })();
 
-export default scrollPage;
+//export default scrollPage;
+
+

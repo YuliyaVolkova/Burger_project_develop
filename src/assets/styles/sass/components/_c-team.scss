@@ -22,9 +22,9 @@
 
 	display: flex;
 	flex-direction: column;
-	justify-content: space-evenly;
-	width: 85%;
-	height: 85%;
+	justify-content: center;
+	width: 71%;
+	height: 90%;
 
 	@include tablet {
 
@@ -62,39 +62,40 @@
 
 		.team-card__title:before {
 			
-			transform: translateY(-50%) scale(1, -1);
+		transform: rotate(-180deg);
 		}
 
-		.team-card__link {
+		.team-card__title {
 
 			color: $brand-color;
 		}
 
 		.team-card__content {
 			
-			height: 100%;
-			display: flex;
-			justify-content: space-around;
+			max-height: 300px;
+			transform: scale(1);
+		}
+	}
 
-			@include tablet {
+	&:last-child .team-card__content {
 
-				flex-direction: column;
-				align-items: center;
+		transform-origin: 20% top;
 
-			}
+		@include tablet {
+
+			transform-origin: center top;
 		}
 	}	
+
 }
 
 .team-card__title {
-
+	
+	display: inline-block;
 	text-transform: uppercase;
 	font-family: 'gagalin';
 	font-weight: normal;
-	margin-left: rem(25);
-	position: relative;
-	transition: 0.4s;
-
+	
 	@include tablet {
 	
 		font-size: rem(24);
@@ -103,30 +104,40 @@
 	&:before {
 
 		content: '';
-		display: block;
+		display: inline-block;
 		@include triangle(bottom, $brand-color, 0.3rem);
-		position: absolute;
-		top: 50%;
-		left: rem(-25);
-		transform: translateY(-50%);
-	}
-}
-
-.team-card__link {
-
-	transition: color 0.3s;
-
-	&:hover {
-
-		color: $brand-color;
+		z-index: none;
+		transition: transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+		transform-origin: center;
+		transform: none;
+		margin-right: rem(20);
+		will-change: transform;
 	}
 }
 
 .team-card__content {
 
-	height: 0px;
+	max-height: 0px;
 	overflow: hidden;
-	margin: 2.5% 0;
+	margin: 3% 0;
+	transition: max-height 0.9s, transform 0.7s;
+	//transition: max-height 0.5s, transform 1s;
+	//transition: max-height 1s, transform 0.2s;
+	transition-timing-function: ease-in-out, ease-in-out;
+	transform-origin: 20% center;
+	transform: scale(0.00001);
+	display: flex;
+	justify-content: space-around;
+	will-change: max-height, transform;
+	
+	@include tablet {
+
+				flex-direction: column;
+				align-items: center;
+				transform-origin: center;
+				margin: 5% 0;
+
+			}
 }
 
 .team-card__img-wrap {
@@ -138,7 +149,7 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	overflow: hidden;
-	margin-bottom: 1.5%;
+	margin: 0 4% 5%;
 
 	@include s-mobile {
 
@@ -155,10 +166,13 @@
 
 	color: $primaryColor;
 	font-family: 'ubuntu';
-	flex-basis: 70%;
+	//flex-basis: 70%;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	//justify-content: space-between;
+	margin-bottom: 5%;
+	line-height: rem(24);
+	overflow: hidden;
 	
 	@include tablet {
 
@@ -170,7 +184,7 @@
 .team-card__desc-header {
 
 	font-weight: 900;
-	margin-bottom: 1%;
+	margin-bottom: 3%;
 }
 
 .team-card__desc-text {

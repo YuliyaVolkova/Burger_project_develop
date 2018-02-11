@@ -54,6 +54,11 @@
 
 		padding: 30% 42% 20% 20%;
 	}
+
+	@include s-mobile {
+
+		padding: 30% 28% 20% 20%;
+	}
 }
 
 .c-products__content-row {
@@ -65,6 +70,11 @@
 	align-items: center;
 	min-width: rem(233);
 	font-size: rem(14);
+
+	@include s-mobile {
+
+		min-width: rem(170);
+	}
 
 	&:last-child {
 
@@ -87,6 +97,11 @@
 	flex-grow: 1;
 	margin-right: rem(60);
 	text-align: left;
+
+	@include s-mobile {
+
+		margin-right: rem(45);
+	}
 }
 
 .c-products__weight {
@@ -106,6 +121,14 @@
 		position: absolute;
 		top: 1%;
 		right: 1%;
+
+		@include s-mobile {
+			
+			@include size(rem(18), rem(18));
+			top: 2%;
+			right: 2%;
+
+		}
 	}
 }
 
@@ -138,6 +161,11 @@
 	  		left: 50%;
 	  		transform: rotate(45deg);
 	  	}
+
+	  	@include s-mobile {
+			
+			width: rem(17);
+		}
 	}
 
 	&:after {
@@ -153,6 +181,11 @@
 	  	top: 50%;
 	  	left: 50%;
 	  	transform: rotate(-45deg); 
+		}
+
+		@include s-mobile {
+			
+			width: rem(17);
 		}
 	}
 }

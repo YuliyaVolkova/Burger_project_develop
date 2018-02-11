@@ -2,14 +2,19 @@ const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const extractSass = new ExtractTextPlugin({filename:'./assets/css/styles.css', allChunks:true});
-var autoprefixer = require('autoprefixer');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+const autoprefixer = require('autoprefixer');
+
+
+const HOST = process.env.HOST || 'localhost';
+const PORT = process.env.PORT || 8080;
 
  module.exports = {
 
   context: path.resolve(__dirname, 'src'),
 
   entry: {
-    app: ['./app/app.js']
+    app: ['./app/app.js'],
   },
 
   output: {
@@ -22,8 +27,14 @@ var autoprefixer = require('autoprefixer');
 
   devServer: {
     contentBase: path.resolve(__dirname, 'build'),
+    // Display only errors to reduce the amount of output.
+    stats: "errors-only",
     inline: true,
     hot: true,
+    progress: true,
+    historyApiFallback: true,
+    host: HOST,
+    port: PORT,
   },
 
   module: {
@@ -72,6 +83,24 @@ var autoprefixer = require('autoprefixer');
   plugins: [
    
       extractSass,
+      new BrowserSyncPlugin(
+      // BrowserSync options
+      {
+       // host: HOST,
+        //port: PORT,
+        //proxy: 'http://localhost:3100/',
+        host: 'localhost',
+            port: 3000,
+            proxy: 'http://localhost:8080/'
+      },
+      // plugin options
+      {
+        // prevent BrowserSync from reloading the page
+        // and let Webpack Dev Server take care of this
+        reload: false
+      }
+    ),
+
   ],
 }
 

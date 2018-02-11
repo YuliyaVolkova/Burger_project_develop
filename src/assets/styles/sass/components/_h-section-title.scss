@@ -67,5 +67,14 @@
 			margin-bottom: 1.5rem;
 		}
 	}
+	&.team {
+
+		margin: 0 0 17%;
+
+		@include tablet {
+
+			margin: 0 0 10%;
+		}
+	}
 }
 
