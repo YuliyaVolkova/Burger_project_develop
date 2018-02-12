@@ -180,7 +180,6 @@ var slider = (function() {
 
 
     control.addEventListener('click', button, false);
-   // section.addEventListener('mouseover', sliderKeyDownEvent, false);
    document.body.addEventListener('keydown', keyDown, false);
 
    if(typeMobDevice) mobileSliderSwipe(swipeSwitch);      
@@ -190,4 +189,4 @@ var slider = (function() {
 
 })();
 
-export default slider;
+export default slider

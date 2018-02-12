@@ -46,7 +46,7 @@ var products = (function() {
   	   setTimeout(function () {
 
           link.querySelector('.c-products__desc').classList.add('visually-hidden');
-  	   }, 700);
+  	   }, 300);
   }
 
 

@@ -6,21 +6,21 @@
 	right: 0;
 	bottom: 0;
 	display: flex;
+	justify-content: flex-end;
 }
 
 .c-menu__accord {
 
 	display: flex;
-
-	@include tablet {
-
-		flex-direction: row-reverse;
-	}
+	justify-content: flex-end;
+	transform: none;
+	will-change: transform;
 }
 
 .c-menu__menu-card {
 	
 	display: flex;
+	justify-content: flex-end;
 
 	&.is-active {
 
@@ -32,22 +32,30 @@
 		.menu-card__content {
 	
 			width: rem(540);
-
+		
 			@include tablet {
 
 				width: rem(530);
 			}
-
-			@include mobile {
-
-				width: rem(400);
-			}
-
-			@include mobile {
-
-				width: rem(300);
-			}
 		}
+
+		.menu-card__desc {
+
+			opacity: 1;
+			max-height: 100%;
+			transition: max-heigth 0.4s, opacity 0.3s;
+			transition-delay: 0.8s;
+		}
+
+		.c-close-menu {
+
+			@include mobile {
+			
+				opacity: 1;
+				transition: opacity 0.3s;
+				transition-delay: 0.8s;
+			}
+		}	
 	}
 }
 
@@ -84,6 +92,11 @@
 		width: 3rem;
 		font-size: rem(35);
 	}
+
+	@include s-mobile {
+
+		width: rem(45);
+	}
 }
 
 .menu-card__link {
@@ -103,6 +116,10 @@
 
 		line-height: rem(60);
 	}
+	@include s-mobile {
+
+		line-height: rem(45);
+	}
 }
 
 .menu-card__content {
@@ -112,14 +129,80 @@
 	background-color: rgba($text-color, 0.93);
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	padding: 20% 0;
+	will-change: width;
+	transition: width 0.9s;
+	position: relative;
 }
 
 .menu-card__desc {
 	
 	color: $primaryColor;
 	font-size: rem(14);
-	width: 80%;
-	height: 85%;
+	width: 75%;
 	overflow: hidden;
+	opacity: 0;
+	will-change: opacity, max-height;
+	max-height: 0;
+}
+
+.c-close-menu {
+
+	@include mobile {
+			
+			@include size(rem(18), rem(18));
+			position: absolute;
+			overflow: visible;
+			clip: initial;
+			opacity: 0;
+			top: 4%;
+			right: 20%;
+	}
+}
+
+.c-close-menu__link {
+
+@include mobile {
+
+		overflow: visible;
+		clip: initial;
+		display: block;
+		position: absolute;
+		width: 0;
+		height: 0;
+		top: 50%;
+		left: 0;
+	}
+	
+	&:before {
+
+		@include mobile {
+
+	  		content: "";
+	  		display: block;
+	  		@include size(rem(17), rem(3));
+	  		border-radius: 33%;
+	  		background-color: $primaryColor;
+	  		position: absolute;
+	  		top: 50%;
+	  		left: 50%;
+	  		transform: rotate(45deg);
+	  	}
+	}
+
+	&:after {
+	
+		@include mobile {
+
+	  	content: "";
+	  	display: block;
+	 	 @include size(rem(17), rem(3));
+	  	border-radius: 33%;
+	  	background-color: $primaryColor;
+	  	position: absolute;
+	  	top: 50%;
+	  	left: 50%;
+	  	transform: rotate(-45deg); 
+		}
+	}
 }

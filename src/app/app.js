@@ -6,7 +6,8 @@ import onTouch from './components/swipe.js';
 import mobileNav from './components/c-mobile_nav.js';
 import slider from './components/slider.js';
 import products from './components/c-product_desc.js';
-import AccordTeam from './components/accord_team.js';
+import AccordTeam from './components/team_vert_acco.js';
+import accordMenu from './components/menu_gor_acco.js';
 
 
 var scrollPage = (function() {
@@ -86,6 +87,8 @@ var scrollPage = (function() {
             break;
 
           case 3: AccordTeam.handler();
+             break;
+          case 4: accordMenu.handler();
              break;
 
           default: return;

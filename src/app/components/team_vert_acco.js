@@ -7,6 +7,8 @@ var accordTeam = (function() {
     items = list.querySelectorAll('.c-team__team-card'),
     accoTrigger = list.querySelectorAll('.team-card__title'),
    itemsAr = Array.prototype.slice.call(items),
+   unboundForEach = Array.prototype.forEach,
+   forEach = Function.prototype.call.bind(unboundForEach),
    index;
 
 
@@ -21,14 +23,12 @@ var accordTeam = (function() {
     }
 
     index = indexNew;
-    setTimeout(function () { itemAct.classList.toggle('is-active');}, 700);
+    setTimeout(function () { itemAct.classList.toggle('is-active');}, 
+      700);
   }
   
 
   function handler() {
-
-      var unboundForEach = Array.prototype.forEach,
-        forEach = Function.prototype.call.bind(unboundForEach);
 
        forEach(accoTrigger, function (el) {
 
