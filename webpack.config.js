@@ -4,10 +4,11 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const extractSass = new ExtractTextPlugin({filename:'./assets/css/styles.css', allChunks:true});
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const autoprefixer = require('autoprefixer');
-
+//const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const HOST = process.env.HOST || 'localhost';
 const PORT = process.env.PORT || 8080;
+
 
  module.exports = {
 
@@ -24,13 +25,16 @@ const PORT = process.env.PORT || 8080;
   },
 
   devtool: "source-map",
+  //target: "async-node",
+  stats: "errors-only",
 
   devServer: {
     contentBase: path.resolve(__dirname, 'build'),
     // Display only errors to reduce the amount of output.
-    stats: "errors-only",
+    //stats: "errors-only",
+   // compress: true,
     inline: true,
-    hot: true,
+   // https: true,
     progress: true,
     historyApiFallback: true,
     host: HOST,
@@ -77,6 +81,14 @@ const PORT = process.env.PORT || 8080;
               }
             ] 
       })    
+    },
+    {
+       test: /\.js$/,
+       exclude: /node_modules/,
+       loader: 'babel-loader',
+       query: {
+           presets: ['es2015']
+        }
     } 
   ]},
   
@@ -100,6 +112,7 @@ const PORT = process.env.PORT || 8080;
         reload: false
       }
     ),
+  //  new CleanWebpackPlugin(['build'])
 
   ],
 }

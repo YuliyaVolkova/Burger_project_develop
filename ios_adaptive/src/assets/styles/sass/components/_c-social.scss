@@ -1,0 +1,33 @@
+
+.c-social {
+
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.c-social__item {
+
+	height: rem(22);
+
+}
+
+.c-social__link {
+	
+	display: inline-block;
+	height: 100%;
+
+	&:hover .svg-use {
+
+		opacity: 1;
+	}
+}
+
+.svg-use {
+
+	@include size(rem(22));
+	transition: opacity 0.6s;
+	opacity: 0.3;
+	fill: $primaryColor;
+}
+

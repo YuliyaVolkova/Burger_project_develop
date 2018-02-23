@@ -1,0 +1,25 @@
+
+.c-tel {
+
+	margin-bottom: rem(5);
+
+}
+
+.c-tel__link {
+	
+	font-weight: bold;
+	color: $second-color;
+	display: inline-block;
+	vertical-align: middle;
+
+	&:before {
+		content: '';
+		display: inline-block;
+		@include size(rem(16));
+		background: url('../../img/phone.svg') no-repeat center;
+		background-size: cover;
+		vertical-align: rem(-1px);
+		margin-right: rem(10);
+	}
+
+}

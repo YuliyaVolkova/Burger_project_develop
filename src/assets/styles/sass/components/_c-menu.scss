@@ -13,8 +13,12 @@
 
 	display: flex;
 	justify-content: flex-end;
-	transform: none;
-	will-change: transform;
+
+	@include mobile {
+		
+		will-change: transform;
+		transition: transform 0.9s;
+	}
 }
 
 .c-menu__menu-card {
@@ -30,12 +34,20 @@
 		}
 
 		.menu-card__content {
-	
-			width: rem(540);
-		
-			@include tablet {
 
-				width: rem(530);
+			@include laptop {
+				
+				width: rem(540);
+			}
+
+			@include desktop {
+
+				width: rem(540);
+			}
+
+			@include custom {
+
+				width: rem(540);
 			}
 		}
 
@@ -128,8 +140,8 @@
 	width: 0;
 	overflow: hidden;
 	background-color: rgba($text-color, 0.93);
-	display: flex;
-	justify-content: center;
+	//display: flex;
+	//justify-content: center;
 	padding: 20% 0;
 	will-change: width;
 	transition: width 0.9s;
@@ -145,6 +157,7 @@
 	opacity: 0;
 	will-change: opacity, max-height;
 	max-height: 0;
+	margin: auto;
 }
 
 .c-close-menu {

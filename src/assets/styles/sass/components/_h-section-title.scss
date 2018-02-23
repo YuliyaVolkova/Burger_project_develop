@@ -76,5 +76,13 @@
 			margin: 0 0 10%;
 		}
 	}
-}
+	&.order {
 
+		margin-bottom: 2%;
+
+		@include tablet {
+
+			margin: 0 0 10%;
+		}
+	}
+}

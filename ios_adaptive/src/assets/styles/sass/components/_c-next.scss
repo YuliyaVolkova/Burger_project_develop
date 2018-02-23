@@ -1,0 +1,21 @@
+
+.c-next {
+
+	@include size(rem(32), rem(22)); 
+	margin-bottom: 4%;
+
+}
+
+.c-next__link {
+
+	display: block;
+	@include size(100%);
+	transition: transform 0.3s;
+	background: url('../../img/arrow-scroll.svg') no-repeat center;
+	background-size: contain;
+
+	&:hover {
+		
+		transform: scale(1.3);
+	}
+}

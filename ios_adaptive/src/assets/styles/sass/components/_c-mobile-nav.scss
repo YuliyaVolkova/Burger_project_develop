@@ -1,0 +1,136 @@
+
+.c-mobile-nav {
+	
+	display: none;
+
+	@include tablet {
+			
+		display: block;
+		position: fixed;
+		top: rem(40);
+		right: 3%;
+		z-index: 9;
+		@include size(rem(30), rem(24));
+	}
+
+	&.is-active .c-mobile-nav__target {
+
+		@include tablet {
+
+			@include size(0);
+			overflow: hidden;
+		}
+	}
+	
+	&.is-active .c-mobile-nav__target:after,
+	&.is-active .c-mobile-nav__target:before {
+
+		@include tablet {
+
+			width: inherit;
+			height: inherit;
+			overflow: hidden;
+		}
+	}
+
+
+	&.is-active {
+		
+		@include tablet {
+			
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			top: 0;
+			left: 0;
+			@include size(100%);
+			padding: 1rem;
+			background-color: rgba($text-color, 0.99);
+			
+		}
+	}
+}
+
+.c-mobile-nav__target {
+	
+	display: block;
+	@include size(rem(30), rem(6));
+	background-color: $primaryColor;
+	border-radius: 20%;
+	overflow: visible;
+	font-size: 0;
+	transition: 0.3s;
+
+	&:before {
+
+	  content: "";
+	  display: block;
+	  @include size(rem(30), rem(6));
+	  border-radius: 20%;
+	  background-color: $primaryColor;
+	  position: absolute;
+	  top: rem(-10);
+	  left: 0;
+	}
+
+	&:after {
+
+	  content: "";
+	  display: block;
+	  @include size(rem(30), rem(6));
+	  border-radius: 20%;
+	  background-color: $primaryColor;
+	  position: absolute;
+	  bottom: 0.5rem;
+	  left: 0;
+	}
+}
+
+.c-mobile-nav__menu {
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.c-mobile-nav__item {
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-transform: uppercase;
+	font-size: rem(24);
+	font-weight: 400;
+
+	&:before {
+
+		content: "";
+		display: block;
+		@include size(rem(5));
+		border-radius: 50%;
+		background-color: $primaryColor;
+		margin: rem(15);
+	}
+
+	&:first-child:before {
+		
+		display: none;
+	}
+}
+
+.c-close--mob-nav {
+
+	position: absolute;
+	top: 4%;
+	right: 3%;
+}
+
+.c-logo--mob-nav {
+
+	position: absolute;
+	top: 4%;
+	left: 3%;
+}

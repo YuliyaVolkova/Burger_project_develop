@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 	<head>
@@ -116,12 +117,8 @@
 			<section class="l-page l-slider" id="three">
 				<div class="c-slider">
 					<div class="c-slider__control">
-						<div class="c-slider__next">
-							<a href="#" class="c-slider__next-link hide-text">next</a>
-						</div>
-						<div class="c-slider__back">
-							<a href="#" class="c-slider__back-link hide-text">back</a>
-						</div>
+						<div class="c-slider__next"></div>
+						<div class="c-slider__back"></div>
 					</div>
 					<div class="c-slider__frame">
 						<ul class="c-slider__list is-set">
@@ -452,7 +449,7 @@
 							<div class="feeds-card__text">
 								<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis qui, et placeat ullam ipsam eveniet voluptas pariatur. </span>
 							</div>
-							<div class="c-button c-button--bg-text-color">
+							<div class="c-button c-button--feeds">
 								<a href="#" class="c-button__link">подробнее</a>
 							</div>
 						</div>
@@ -465,7 +462,7 @@
 							<div class="feeds-card__text">
 								<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis qui, et placeat ullam ipsam eveniet voluptas pariatur. </span>
 							</div>
-							<div class="c-button c-button--bg-text-color">
+							<div class="c-button c-button--feeds">
 								<a href="#" class="c-button__link">подробнее</a>
 							</div>
 						</div>
@@ -478,7 +475,7 @@
 							<div class="feeds-card__text">
 								<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis qui, et placeat ullam ipsam eveniet voluptas pariatur. </span>
 							</div>
-							<div class="c-button c-button--bg-text-color">
+							<div class="c-button c-button--feeds">
 								<a href="#" class="c-button__link">подробнее</a>
 							</div>
 						</div>
@@ -491,7 +488,7 @@
 							<div class="feeds-card__text">
 								<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis qui, et placeat ullam ipsam eveniet voluptas pariatur. </span>
 							</div>
-							<div class="c-button c-button--bg-text-color">
+							<div class="c-button c-button--feeds">
 								<a href="#" class="c-button__link">подробнее</a>
 							</div>
 						</div>
@@ -504,7 +501,7 @@
 							<div class="feeds-card__text">
 								<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis qui, et placeat ullam ipsam eveniet voluptas pariatur. </span>
 							</div>
-							<div class="c-button c-button--bg-text-color">
+							<div class="c-button c-button--feeds">
 								<a href="#" class="c-button__link">подробнее</a>
 							</div>
 						</div>
@@ -517,7 +514,7 @@
 							<div class="feeds-card__text">
 								<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis qui, et placeat ullam ipsam eveniet voluptas pariatur. </span>
 							</div>
-							<div class="c-button c-button--bg-text-color">
+							<div class="c-button c-button--feeds">
 								<a href="#" class="c-button__link">подробнее</a>
 							</div>
 						</div>
@@ -530,7 +527,7 @@
 							<div class="feeds-card__text">
 								<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis qui, et placeat ullam ipsam eveniet voluptas pariatur. </span>
 							</div>
-							<div class="c-button c-button--bg-text-color">
+							<div class="c-button c-button--feeds">
 								<a href="#" class="c-button__link">подробнее</a>
 							</div>
 						</div>
@@ -543,7 +540,7 @@
 							<div class="feeds-card__text">
 								<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis qui, et placeat ullam ipsam eveniet voluptas pariatur. </span>
 							</div>
-							<div class="c-button c-button--bg-text-color">
+							<div class="c-button c-button--feeds">
 								<a href="#" class="c-button__link">подробнее</a>
 							</div>
 						</div>
@@ -552,30 +549,30 @@
 			</section>
 			<section class="l-page l-order" id="seven">
 				<div class="l-container justify-evenly">
-					<h2 class="h-section-title align-center">закажите доставку</h2>
-					<form action="#" name="order" id="order" class="c-form" method="POST">
+					<h2 class="h-section-title order align-center">закажите доставку</h2>
+					<form action="./server_test.php" id="order" class="c-form" method="POST">
 						<div class="c-form__inner">
 							<div class="c-form__column">
 								<div class="c-form__row">
 									<label class="c-form__item">	
-										<span class="c-form__item-title">Имя</span>
-										<input type="text" class="c-form__input" name="name" placeholder="">
+										<span class="c-form__item-title">Имя&nbsp<span class="c-form__required-marker">*</span></span>
+										<input type="text" class="c-form__input" name="username" placeholder="" data-rule="name|required">
 									</label>
 									<label class="c-form__item">	
-										<span class="c-form__item-title">Телефон</span>
-										<input type="text" class="c-form__input" name="phone" placeholder="">
+										<span class="c-form__item-title">Телефон&nbsp<span class="c-form__required-marker">*</span></span>
+										<input type="text" class="c-form__input" name="phone" placeholder="" data-rule="phone|required">
 									</label>
 								</div>
 								<div class="c-form__row">
 									<label class="c-form__item">
-										<span class="c-form__item-title">Улица</span>
-										<input type="text" class="c-form__input" name="street" placeholder="">
+										<span class="c-form__item-title">Улица&nbsp<span class="c-form__required-marker">*</span></span>
+										<input type="text" class="c-form__input" name="street" placeholder="" data-rule="street|required">
 									</label>
 								</div>
 								<div class="c-form__row">
 									<label class="c-form__item">	
-										<span class="c-form__item-title">Дом</span>
-										<input type="text" class="c-form__input" name="build" placeholder="">
+										<span class="c-form__item-title">Дом&nbsp<span class="c-form__required-marker">*</span></span>
+										<input class="c-form__input" name="build" placeholder="" data-rule="build|required">
 									</label>
 									<label class="c-form__item">	
 										<span class="c-form__item-title">Корпус</span>
@@ -601,17 +598,17 @@
 								<div class="c-form__buttons">
 									<div class="c-form__row">
 										<label  class="c-form__item">
-											<input type="radio" name="cash" value="cash" class="c-form__radio"> 
+											<input type="radio" name="pay-option" value="cash" class="c-form__radio"> 
 											<span class="c-form__item-title c-form__item-title--radio">Потребуется сдача</span>
 										</label>
 										<label  class="c-form__item">
-											<input type="radio" name="cash" value="cash" class="c-form__radio" checked> 
+											<input type="radio" name="pay-option" value="card" class="c-form__radio" checked> 
 											<span class="c-form__item-title c-form__item-title--radio">Оплата по карте</span>
 										</label>
 									</div>
 									<div class="c-form__row">
 										<label class="c-form__item">
-											<input type="checkbox" name="callback" class="c-form__checkbox">	
+											<input type="checkbox" name="dont-disturb" class="c-form__checkbox">	
 											<span class="c-form__item-title c-form__item-title--checkbox">Не перезванивать</span>
 										</label>
 									</div>
@@ -625,12 +622,13 @@
 									</div>
 								</div>
 							</div>
+							<div class="c-form__required-info">Поля, отмеченные&nbsp<span class="c-form__required-marker">*</span>&emsp;нужно обязательно заполнить</div>
 						</div>	
 					</form>
 				</div>
 			</section>
 			<section class="l-page l-map" id="eight">
-				<div class="l-yandex-map"><div class="c-yandex-map"></div></div>
+				<div class="с-yandex-map" id="map"></div>
 				<footer class="l-footer">
 					<div class="l-container l-footer__inner">
 							<div class="l-footer__col-one">
@@ -663,7 +661,7 @@
 		<div class="l-nav-dots">
 				<ul class="c-nav-dots">
 					<li class="c-nav-dots__item is-active">
-						<a href="#one" class="c-nav-dots__link hide-text"> главная страница
+						<a href="#one" class="c-nav-dots__link hide-text"> hero
 						</a>
 					</li>
 					<li class="c-nav-dots__item">
@@ -671,7 +669,7 @@
 						</a>
 					</li>
 					<li class="c-nav-dots__item">
-						<a href="#three" class="c-nav-dots__link hide-text">3 секция
+						<a href="#three" class="c-nav-dots__link hide-text">burgers
 						</a>
 					</li>
 					<li class="c-nav-dots__item">
@@ -698,13 +696,13 @@
 			</div>
 		<div class="l-mobile-nav">
 			<nav class="c-mobile-nav ">
-				<a href="" class="hide-text c-mobile-nav__target">menu</a>
+				<a href="" class="hide-text c-mobile-nav__target">navigation</a>
 				<ul class="c-mobile-nav__menu visually-hidden">
 					<li class="c-mobile-nav__item"><a href="#two" class="c-mobile-nav__link">Почему мы</a></li>
 					<li class="c-mobile-nav__item"><a href="#five" class="c-mobile-nav__link">Меню</a></li>
 					<li class="c-mobile-nav__item"><a href="#six" class="c-mobile-nav__link">Отзывы</a></li>
 					<li class="c-mobile-nav__item"><a href="#four" class="c-mobile-nav__link">Кто мы</a></li>
-					<li class="c-mobile-nav__item"><a href="#seven" class="c-mobile-nav__link">Свяжитесь с нами</a></li>
+					<li class="c-mobile-nav__item"><a href="#seven" class="c-mobile-nav__link">Закажите доставку</a></li>
 					<li class="c-mobile-nav__item"><a href="#eight" class="c-mobile-nav__link">Контакты</a></li>
 				</ul>
 				<div class="c-logo c-logo--mob-nav visually-hidden">
@@ -715,6 +713,26 @@
 				</div> 
 			</nav>
 		</div>
+		<div type="template/text" class="visually-hidden" id="reviewModalTempl">
+			<div class="c-modale-review__window">
+				<div class="c-modale-review__text">
+					<div class="c-modal-review__header">Константин Спилберг</div>
+					<div class="c-modal-review__content">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+				</div>		
+				<div class="c-close--review"><a href="#" class="c-close__link--review"></a>
+				</div> 
+			</div>
+		</div>
+		<div type="template/text" class="visually-hidden" id="orderModalTempl">
+			<div class="c-modale-order__popup">
+				<div class="c-modale-order__text">
+					<div class="c-modal-order__content"></div>
+				</div>		
+			<div class="c-close--order"><a href="#" class="c-close__link--order"></a></div> 
+		</div>								
+		</div>
+		<script type="text/javascript" src="./form_validate.js"></script>
+		<script src="//api-maps.yandex.ru/2.1/?lang=en_RU" type="text/javascript"></script>
 		<script src="bundle.js"></script>
 	</body>
 </html>

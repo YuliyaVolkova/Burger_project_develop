@@ -60,11 +60,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b43b', end
 .l-order {
 
 	background-image: url('../../img/bg/order_bg_900.jpg');
+	
+	@include tablet {
 
+		align-items: center;
+		}
 }
 
 .l-map {
 
 	background-image: url('../../img/bg/map_bg_1100.jpg');
+	flex-direction: column;
 
 }

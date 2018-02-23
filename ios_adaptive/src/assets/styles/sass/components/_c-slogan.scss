@@ -1,0 +1,27 @@
+
+.c-slogan {
+
+	font-family: 'lifehack';
+	font-weight: normal;
+	color: $primaryColor;
+	font-size: rem(65);
+	line-height: 0.9em;
+	width : 100%;
+
+	@include tablet {
+
+		padding: 0;
+		text-align: center;
+	}
+
+	@include mobile {
+
+		font-size: rem(54);
+	}
+
+	@include s-mobile {
+
+		font-size: rem(30);
+	}
+
+}

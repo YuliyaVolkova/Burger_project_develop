@@ -1,0 +1,86 @@
+
+
+.c-modale-order__popup {
+
+    background-color: $primaryColor;
+	border-radius: rem(5);
+	padding: 3% 5%;
+	min-height: rem(200);
+	min-width: rem(150);
+	max-width: 30%;
+	max-height: 30%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	@include tablet {
+
+		max-width: 56%;
+	}
+
+	@include s-mobile {
+
+		min-width: 85%;
+		max-width: 85%;	
+	}
+}
+
+.c-modale-order__text {
+
+	aligne-text: left;
+	font-size: rem(14);
+	overflow: hidden;
+
+}
+
+.c-modal-order__content {
+	
+	font-family: 'ubuntu';
+	font-weight: 300;
+}
+
+.c-close--order {
+
+	position: absolute;
+	cursor: pointer;
+	@include size(rem(18), rem(18));
+			top: 7%;
+			right: 3%;
+
+}
+
+.c-close__link--order {
+
+	display: block;
+		position: absolute;
+		width: 0;
+		height: 0;
+		top: 50%;
+		left: 0;
+	
+	&:before {
+
+	  		content: "";
+	  		display: block;
+	  		@include size(rem(17), rem(3));
+	  		border-radius: 33%;
+	  		background-color: $second-color;
+	  		position: absolute;
+	  		top: 50%;
+	  		left: 50%;
+	  		transform: rotate(45deg);
+	}	
+
+	&:after {
+	
+	  	content: "";
+	  	display: block;
+	 	 @include size(rem(17), rem(3));
+	  	border-radius: 33%;
+	  	background-color: $second-color;
+	  	position: absolute;
+	  	top: 50%;
+	  	left: 50%;
+	  	transform: rotate(-45deg); 
+	}	
+}

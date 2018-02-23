@@ -1,15 +1,23 @@
 
+// import styles
+
 import '../assets/styles/sass/main.scss';
+
+// import js modules
 
 import isMobileDevice from './components/detect_mobile.js';
 import onTouch from './components/swipe.js';
 import mobileNav from './components/c-mobile_nav.js';
+import initMap from './components/yand_map.js';
 import slider from './components/slider.js';
 import products from './components/c-product_desc.js';
 import AccordTeam from './components/team_vert_acco.js';
 import accordMenu from './components/menu_gor_acco.js';
+import reviewModal from './components/review_modal.js';
+import formOrder from './components/form_order.js';
 
 
+// OPS
 var scrollPage = (function() {
 
 	var screen = 0,
@@ -75,22 +83,19 @@ var scrollPage = (function() {
     if (prevScreen===2) { 
 
       document.body.removeEventListener('keydown', slider.keyDown, false);
-      slider.handler(isMobile, 'disabled');
       var prodLink = products.returnActLink();
       if(prodLink) products.close(prodLink);
     }
      switch(screen) {
-          case 2: { 
-                  slider.handler(isMobile); 
+          case 2: slider.handler(); 
                   products.handler();
-                }
             break;
-
           case 3: AccordTeam.handler();
              break;
           case 4: accordMenu.handler();
              break;
-
+          case 5: reviewModal.handler();
+              break;
           default: return;
         }
       
@@ -133,7 +138,7 @@ var scrollPage = (function() {
 
     e.preventDefault();
 
-    if(!flag) {
+    if(flag) return;
 
       flag=true;
 
@@ -144,26 +149,27 @@ var scrollPage = (function() {
 
 		  else if (y>0)	 screen ++;
         
-         showSect(screen);
+      showSect(screen);
           
-      setTimeout(function() {flag=false;}, 800);
-    }
+      setTimeout(function() {flag=false;}, 1000);
   }
 
 
   function keyDown(e) {
 
     var tag = e.target.tagName.toLowerCase();
-        prevScreen = screen;
+
         switch(e.which) {
           case 38: 
             if (tag != 'input' && tag != 'textarea') {
+              prevScreen = screen;
               screen--; 
               showSect(screen);
             }
             break;
           case 40:
             if (tag != 'input' && tag != 'textarea') {
+              prevScreen = screen;
               screen++; 
               showSect(screen);
             }
@@ -176,16 +182,33 @@ var scrollPage = (function() {
 
     function mobilePageSwipe() { 
 
-      onTouch(container, function (dir) {
+      onTouch(document.body, function (dir) {
         
-        if (dir === 'down') screen--;
-        else if (dir === 'up')  screen++;
+        if(flag) return;
+          flag=true;
+        
+        if (dir === 'down') {
+          prevScreen = screen;
+          screen--;
+        }
+
+        else if (dir === 'up') { 
+          prevScreen = screen;
+          screen++;
+        }
+
+        console.log(screen, 'screen');
         showSect(screen);
-     });
+        setTimeout(function() {flag=false;}, 100);
+       //flag=false;
+      });
     }
 
     
 	function handler() {
+
+    formOrder.handler();
+   // ymaps.ready(initMap);
 
     if(mediaMth.matches) {
 
@@ -229,6 +252,8 @@ var scrollPage = (function() {
 })();
 
 window.onload = scrollPage.handler;
+ymaps.ready(initMap);
+
 	
 
 console.log("It` work %%%!");

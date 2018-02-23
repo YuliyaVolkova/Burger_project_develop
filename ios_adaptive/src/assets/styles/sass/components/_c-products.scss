@@ -1,0 +1,191 @@
+
+.c-products {
+
+	@include size(rem(90));
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+
+.c-products__link {
+
+	@include size(100%);
+	background-color: rgba($second-color, 0.4);
+	border-radius: rem(4);
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	transition: background-color 0.7s;
+	&:hover {
+
+			background-color: rgba($second-color, 0.7);
+		}
+}
+
+.c-products__main-img {
+
+	@include size(rem(45));
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+.c-products__title {
+
+	font-family: 'gagalin';
+	font-weight: normal;
+	font-size: rem(14);
+}
+
+.c-products__desc {
+
+	position: absolute;
+	left: 100%;
+	top: 0;
+	background-color: rgba($primaryColor, 0.9);
+	border-radius: rem(4);
+	padding: 28%;
+	transition: 0.3s;
+	
+	@include tablet {
+
+		padding: 30% 42% 20% 20%;
+	}
+
+	@include s-mobile {
+
+		padding: 30% 28% 20% 20%;
+	}
+}
+
+.c-products__content-row {
+
+	display: flex;
+	font-weight: 700;
+	color: $text-color;
+	margin-bottom: 1rem;
+	align-items: center;
+	min-width: rem(233);
+	font-size: rem(14);
+
+	@include s-mobile {
+
+		min-width: rem(170);
+	}
+
+	&:last-child {
+
+		margin-bottom: 0;
+	}
+}
+
+.c-products__img {
+
+	@include size(rem(45), rem(40));
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	margin-right: rem(20);
+
+}
+
+.c-products__text {
+
+	flex-grow: 1;
+	margin-right: rem(60);
+	text-align: left;
+
+	@include s-mobile {
+
+		margin-right: rem(45);
+	}
+}
+
+.c-products__weight {
+
+	flex-shrink: 0;
+	text-align: right;
+}
+
+.c-close-prod {
+
+
+	@include tablet {
+		
+		overflow: visible;
+		clip: initial;
+		@include size(rem(25), rem(25));
+		position: absolute;
+		top: 1%;
+		right: 1%;
+
+		@include s-mobile {
+			
+			@include size(rem(18), rem(18));
+			top: 2%;
+			right: 2%;
+
+		}
+	}
+}
+
+.c-close-prod__link {
+
+
+	@include tablet {
+
+		overflow: visible;
+		clip: initial;
+		display: block;
+		position: absolute;
+		width: 0;
+		height: 0;
+		top: 50%;
+		left: 0;
+	}
+	
+	&:before {
+
+		@include tablet {
+
+	  		content: "";
+	  		display: block;
+	  		@include size(rem(20), rem(3));
+	  		border-radius: 33%;
+	  		background-color: $second-color;
+	  		position: absolute;
+	  		top: 50%;
+	  		left: 50%;
+	  		transform: rotate(45deg);
+	  	}
+
+	  	@include s-mobile {
+			
+			width: rem(17);
+		}
+	}
+
+	&:after {
+	
+		@include tablet {
+
+	  	content: "";
+	  	display: block;
+	 	 @include size(rem(20), rem(3));
+	  	border-radius: 33%;
+	  	background-color: $second-color;
+	  	position: absolute;
+	  	top: 50%;
+	  	left: 50%;
+	  	transform: rotate(-45deg); 
+		}
+
+		@include s-mobile {
+			
+			width: rem(17);
+		}
+	}
+}
