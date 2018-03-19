@@ -1,0 +1,8 @@
+export default {
+      id: "fb-usage",
+      viewBox: "0 0 36.711 36.711",
+      url: __webpack_public_path__ + "C:\\Users\\Yuliya\\webprojects\\loftscool\\src\\assets\\images\\sprites\\to_social\\fb.svg",
+      toString: function () {
+        return this.url;
+      }
+    }

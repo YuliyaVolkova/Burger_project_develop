@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AACA,OAAQ,CAEP,gBAAgB,CAAE,6BAA6B,CAGhD,aAAc,CAEb,KAAK,CAAE,GAAG,CAIX,cAAe,CAEd,KAAK,CAAE,GAAG",
-"sources": ["_l-hero.scss"],
-"names": [],
-"file": "_l-hero.css"
-}

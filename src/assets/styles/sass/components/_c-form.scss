@@ -132,7 +132,7 @@ textarea.c-form__input {
 
 	&:checked + .c-form__item-title--checkbox:before {
 
-		background: url('../../img/checked.svg') no-repeat center center $primaryColor;
+		background: url('../../images/decor/svg/checked.svg') no-repeat center center $primaryColor;
 		background-size: 75% 80%;	
 	}
 }
@@ -185,10 +185,14 @@ textarea.c-form__input {
 	left: 0;
 	color: rgba($primaryColor, 0.8);
 	font-size: rem(13);
-	@include tablet {
-
+		@include tablet {
 		bottom: -4%;
-	}
+		}
+		@include s-mobile {
+
+			bottom: -10%;
+			line-height: 1.25rem;
+		}
 }
 
 .c-form__required-marker {
@@ -198,22 +202,6 @@ textarea.c-form__input {
 	color: $brand-color;
 }
 
-/*.c-form__name-error {
-
-	display: none;
-	color: $second-color;
-	font-size: rem(13);
-	line-height: rem(12);
-
-}*/
-
-/*.error {
-
-	color: $second-color;
-	font-size: rem(13);
-	line-height: rem(12);
-	border: 1px solid #fa4531;
-}*/
 
 [data-type='validator-error'] {
     font-size: rem(12);
@@ -248,4 +236,23 @@ textarea.c-form__input {
 
 form input[type='text'].error, form input[type='password'].error, form textarea.error {
     border: 1px solid #fa4531;
+}
+
+.order_spinner {
+
+	@include size(rem(50));
+	border-radius: 50%;
+	border: rem(5) solid #f3f1ed;
+	border-top: 5px solid $brand-color;
+	will-change: transform;
+	margin: auto;
+}
+
+.animate {
+	
+	animation-name: spinorder;
+	animation-duration: 0.8s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	transform-origin: center;
 }

@@ -8,6 +8,7 @@
 	background-position: center;
 	background-size: contain;
 	overflow: hidden;
+	//display: flex;
 
 	@include tablet {
 
@@ -19,7 +20,40 @@
 		height: 16rem;
 	}
 }
+
 .c-burger__img {
 	
 	max-width: 100%;
 }
+
+/* to make burger blured load
+.c-burger__img {
+	
+	max-width: 100%;
+	flex-shrink: 0;
+}
+
+.burger-preview {
+
+	width: 100%;
+	flex-shrink: 0;
+}
+ 
+ 
+// fades in and positons full image element once it loads 
+.reveal {
+
+    will-change: opacity transform;
+    animation: reveal 1s ease-out;
+}
+ 
+// animation for fade in 
+@keyframes reveal {
+    0% { opacity: 0;
+    	transform: scale(0.0001);
+     }
+    100% { opacity: 1; 
+    	transform: scale(1);
+    }
+}
+*/

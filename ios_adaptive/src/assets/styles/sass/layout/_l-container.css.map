@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AACA,YAAa,CAEZ,OAAO,CAAE,CAAC,CAEV,KAAK,CAAE,GAAG,CACV,OAAO,CAAE,IAAI,CACb,cAAc,CAAE,MAAM,CACtB,eAAe,CAAE,aAAa,CAC9B,WAAW,CAAE,MAAM,CAIpB,4BAA6B,CAE5B,eAAe,CAAE,MAAM",
-"sources": ["_l-container.scss"],
-"names": [],
-"file": "_l-container.css"
-}

@@ -9,6 +9,7 @@
 	@include size(rem(25), rem(25));
 	position: relative;
 	transition: 0.3s;
+
 	&:before {
 
 	  content: "";

@@ -5,6 +5,7 @@ var formOrder = (function() {
 
 	var form = document.body.querySelector('#order'),
      popUpTmpl = document.body.querySelector('#orderModalTempl'),
+     ovWaiTmpl = document.body.querySelector('#orderWaitTempl'),
      overlay,
      popUpText,
      close,
@@ -22,12 +23,17 @@ var formOrder = (function() {
       return false;
     }
 
-  function openPopUp(mes, reset) {
-
+  function openOverlayWait() {
+    
     overlay = document.createElement('div');
     overlay.classList.add('overlay');
-    overlay.innerHTML = popUpTmpl.innerHTML;
+    overlay.innerHTML = ovWaiTmpl.innerHTML;
     document.body.appendChild(overlay);
+  }
+
+  function openPopUp(mes, reset) {
+
+    overlay.innerHTML = popUpTmpl.innerHTML;
     popUpText = overlay.querySelector('.c-modal-order__content');
     close = overlay.querySelector('.c-close--order');
     popUpText.textContent = mes;
@@ -39,7 +45,7 @@ var formOrder = (function() {
   function closePopUp(e) {
 
     e.preventDefault();
-
+    console.log(e, close);
     setTimeout(function () {
 
         close.removeEventListener('click', closePopUp, false);
@@ -79,6 +85,7 @@ var formOrder = (function() {
 
     // The data sent is what the user provided in the form
     XHR.send(FD);
+    openOverlayWait();
   }
 
   function handler() {

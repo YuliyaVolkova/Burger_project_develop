@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACA,oBAWC,CATA,IAAK,CAEJ,SAAS,CAAE,YAAY,CAGxB,EAAG,CAEF,SAAS,CAAE,cAAc",
+"sources": ["_spin_animation.scss"],
+"names": [],
+"file": "_spin_animation.css"
+}

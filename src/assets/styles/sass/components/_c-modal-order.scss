@@ -27,7 +27,7 @@
 
 .c-modale-order__text {
 
-	aligne-text: left;
+	text-align: center;
 	font-size: rem(14);
 	overflow: hidden;
 
@@ -45,7 +45,7 @@
 	cursor: pointer;
 	@include size(rem(18), rem(18));
 			top: 7%;
-			right: 3%;
+			right: 5%;
 
 }
 
@@ -83,4 +83,12 @@
 	  	left: 50%;
 	  	transform: rotate(-45deg); 
 	}	
+}
+
+.c-modal-order__content-wait {
+
+	font-family: 'ubuntu';
+	font-weight: 300;
+	text-align: center;
+	margin-bottom: 10%;
 }

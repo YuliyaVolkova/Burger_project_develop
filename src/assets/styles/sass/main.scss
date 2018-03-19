@@ -12,12 +12,6 @@
   'base/base',
   'base/helpers';
 
-  @import
-
-  'utils/variables',
-  'utils/functions',
-  'utils/mixins';
-
 @import
 
   'layout/l-wrapper',
@@ -26,7 +20,6 @@
   'layout/l-page',
   'layout/l-header',
   'layout/l-nav-dots',
-  'layout/l-mobile-nav',
   'layout/l-footer';
 
 @import
@@ -43,15 +36,16 @@
   'components/c-products',
   'components/c-kall',
   'components/c-feeds',
-  'components/c-modal-review.scss',
+  'components/c-modal-review',
   'components/c-nav-dots',
   'components/c-next',
   'components/c-close',
   'components/c-team',
   'components/c-menu',
+  'animations/spin_animation',
   'components/c-form',
-  'components/_c-modal-order.scss',
-  'components/_c-yan_map.scss',
+  'components/_c-modal-order',
+  'components/_c-yan_map',
   'components/c-social',
   'components/c-address',
   'components/c-tel';

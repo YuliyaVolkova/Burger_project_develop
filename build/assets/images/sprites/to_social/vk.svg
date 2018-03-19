@@ -1,0 +1,8 @@
+export default {
+      id: "vk-usage",
+      viewBox: "0 0 126 72",
+      url: __webpack_public_path__ + "C:\\Users\\Yuliya\\webprojects\\loftscool\\src\\assets\\images\\sprites\\to_social\\vk.svg",
+      toString: function () {
+        return this.url;
+      }
+    }

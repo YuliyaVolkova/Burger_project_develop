@@ -1,20 +1,22 @@
 
 // import styles
-
+import '../assets/styles/vendors/normalize.css';
 import '../assets/styles/sass/main.scss';
 
 // import js modules
-
 import isMobileDevice from './components/detect_mobile.js';
 import onTouch from './components/swipe.js';
 import mobileNav from './components/c-mobile_nav.js';
-import initMap from './components/yand_map.js';
+import initMap from './components/yand_map/yand_map.js';
 import slider from './components/slider.js';
 import products from './components/c-product_desc.js';
 import AccordTeam from './components/team_vert_acco.js';
 import accordMenu from './components/menu_gor_acco.js';
 import reviewModal from './components/review_modal.js';
 import formOrder from './components/form_order.js';
+
+function requireAll(r) { r.keys().forEach(r); }
+requireAll(require.context('../assets/images/sprites/to_social/', true));
 
 
 // OPS
@@ -36,10 +38,9 @@ var scrollPage = (function() {
     nodesPages = Array.prototype.slice.call(pages),
     unboundForEach = Array.prototype.forEach,
     forEach = Function.prototype.call.bind(unboundForEach),
-    siblings = n => [].slice.call(n.parentElement.children).filter(c=>c!=n),
+    siblings = n => [...n.parentElement.children].filter(c=>c!=n),
+   // siblings = n => [].slice.call(n.parentElement.children).filter(c=>c!=n),
     isMobile = (isMobileDevice())?1:0;
-    //   var siblings = n => [...n.parentElement.children].filter(c=>c!=n);
-
    
 
   function checkIndex(ind) {
@@ -206,9 +207,8 @@ var scrollPage = (function() {
 
     
 	function handler() {
-
+    
     formOrder.handler();
-   // ymaps.ready(initMap);
 
     if(mediaMth.matches) {
 
