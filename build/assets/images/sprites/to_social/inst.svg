@@ -1,8 +1,0 @@
-export default {
-      id: "inst-usage",
-      viewBox: "0 0 36.663 36.664",
-      url: __webpack_public_path__ + "C:\\Users\\Yuliya\\webprojects\\loftscool\\src\\assets\\images\\sprites\\to_social\\inst.svg",
-      toString: function () {
-        return this.url;
-      }
-    }

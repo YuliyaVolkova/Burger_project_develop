@@ -2,7 +2,7 @@
 ### **студент**:  Волкова Юлия
 ### **наставник**: Иванов Максим
 ### **курс**:  WEB Разработка для начинающих
-### **ссылка на gh-pages**  https://yuliyavolkova.github.io/burger_project/ 
+### **ссылка на gh-pages:**  https://yuliyavolkova.github.io/burger_project/ 
 
 ## Webpack 3 сборка для проекта:
 
