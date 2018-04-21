@@ -1,4 +1,3 @@
-
 // import styles
 import '../assets/styles/vendors/normalize.css';
 import '../assets/styles/sass/main.scss';
@@ -17,8 +16,6 @@ import formOrder from './components/form_order.js';
 
 function requireAll(r) { r.keys().forEach(r); }
 requireAll(require.context('../assets/images/sprites/to_social/', true));
-
-
 // OPS
 var scrollPage = (function() {
 
@@ -39,12 +36,9 @@ var scrollPage = (function() {
     unboundForEach = Array.prototype.forEach,
     forEach = Function.prototype.call.bind(unboundForEach),
     siblings = n => [...n.parentElement.children].filter(c=>c!=n),
-   // siblings = n => [].slice.call(n.parentElement.children).filter(c=>c!=n),
     isMobile = (isMobileDevice())?1:0;
    
-
   function checkIndex(ind) {
-
     var maxIndSect = pages.length -1;
     if(ind < 0) ind = 0;
     else if(ind > maxIndSect) ind = maxIndSect;

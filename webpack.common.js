@@ -1,4 +1,3 @@
-
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -8,7 +7,6 @@ const extractSass = new ExtractTextPlugin({filename: './assets/css/styles.css', 
 const autoprefixer = require('autoprefixer');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
